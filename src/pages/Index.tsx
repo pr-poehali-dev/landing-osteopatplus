@@ -57,7 +57,7 @@ const Index = () => {
         </div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-2xl">
-            <div className="animate-fade-in">
+            <div className="animate-fade-in bg-white/95 backdrop-blur-sm p-12 rounded-3xl shadow-2xl border border-primary/10">
               <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-sm mb-6">
                 ✨ 17 лет опыта
               </div>
@@ -70,14 +70,14 @@ const Index = () => {
                 Безопасные методики с доказанной эффективностью.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button onClick={scrollToForm} size="lg" className="bg-accent hover:bg-accent/90 transition-all duration-300 text-lg px-10 py-7 font-semibold">
+                <Button onClick={scrollToForm} size="lg" className="bg-accent hover:bg-accent/90 transition-all duration-300 text-lg px-10 py-7 font-semibold shadow-lg">
                   Записаться на консультацию
                 </Button>
                 <Button 
                   variant="outline" 
                   size="lg"
                   onClick={() => window.open('https://wa.me/79000000000', '_blank')}
-                  className="text-lg px-10 py-7 font-semibold border-2 hover:bg-primary/5 bg-white/80"
+                  className="text-lg px-10 py-7 font-semibold border-2 hover:bg-primary/5 bg-white shadow-lg"
                 >
                   <Icon name="MessageCircle" size={22} className="mr-2" />
                   WhatsApp
