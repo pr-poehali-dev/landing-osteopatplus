@@ -103,7 +103,7 @@ const Index = () => {
                 💼 Профессионал
               </div>
               <h2 className="text-5xl font-heading font-extrabold mb-8 text-primary">
-                О специалисте
+                Обо мне
               </h2>
               <div className="space-y-4 text-lg text-muted-foreground">
                 <p>
