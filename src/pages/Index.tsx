@@ -522,7 +522,7 @@ const Index = () => {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-5" className="premium-card border-0"
+              <AccordionItem value="item-5" className="premium-card border-0">
                 <AccordionTrigger className="text-xl font-bold hover:no-underline hover:text-primary transition-colors">
                   Сколько сеансов потребуется?
                 </AccordionTrigger>
