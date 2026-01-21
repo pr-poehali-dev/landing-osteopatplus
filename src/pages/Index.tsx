@@ -29,9 +29,11 @@ const Index = () => {
           <div className="flex items-center gap-3">
             <svg className="w-12 h-12" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="48" height="48" rx="10" className="fill-primary"/>
-              <path d="M16 20C16 20 18 18 20 20C22 22 22 24 24 26C26 28 26 28 28 26C30 24 32 22 32 22" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-              <circle cx="20" cy="19" r="1.5" fill="white"/>
-              <circle cx="28" cy="27" r="1.5" fill="white"/>
+              <g transform="translate(8, 10)">
+                <path d="M16 20 L16 12 C16 10 14.5 9 13 9 C11.5 9 10.5 10 10.5 11.5 L10.5 7 C10.5 5 9 4 7.5 4 C6 4 5 5 5 6.5 L5 20" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                <path d="M16 20 L16 12 C16 10 17.5 9 19 9 C20.5 9 21.5 10 21.5 11.5 L21.5 7 C21.5 5 23 4 24.5 4 C26 4 27 5 27 6.5 L27 20" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                <ellipse cx="16" cy="22" rx="11" ry="6" fill="white" opacity="0.3"/>
+              </g>
             </svg>
             <h1 className="text-2xl font-heading font-extrabold text-primary">Остеопат<span className="text-accent">+</span></h1>
           </div>
