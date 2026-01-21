@@ -46,9 +46,17 @@ const Index = () => {
         </div>
       </header>
 
-      <section className="pt-36 pb-24 bg-white relative overflow-hidden">
-        <div className="container mx-auto px-6 relative">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+      <section className="pt-36 pb-24 relative overflow-hidden min-h-screen flex items-center">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/files/7b36ae29-bc2c-4161-aaa0-9f84036d4d20.jpg" 
+            alt="Остеопатия"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-transparent"></div>
+        </div>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-2xl">
             <div className="animate-fade-in">
               <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-sm mb-6">
                 ✨ 17 лет опыта
@@ -57,7 +65,7 @@ const Index = () => {
                 Остеопатия<br/>
                 <span className="text-primary">для вашего здоровья</span>
               </h1>
-              <p className="text-xl text-muted-foreground mb-10 leading-relaxed max-w-xl">
+              <p className="text-xl text-foreground mb-10 leading-relaxed">
                 Индивидуальный подход к офисным сотрудникам, спортсменам и беременным. 
                 Безопасные методики с доказанной эффективностью.
               </p>
@@ -69,19 +77,12 @@ const Index = () => {
                   variant="outline" 
                   size="lg"
                   onClick={() => window.open('https://wa.me/79000000000', '_blank')}
-                  className="text-lg px-10 py-7 font-semibold border-2 hover:bg-primary/5"
+                  className="text-lg px-10 py-7 font-semibold border-2 hover:bg-primary/5 bg-white/80"
                 >
                   <Icon name="MessageCircle" size={22} className="mr-2" />
                   WhatsApp
                 </Button>
               </div>
-            </div>
-            <div className="animate-scale-in relative">
-              <img 
-                src="https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/files/7b36ae29-bc2c-4161-aaa0-9f84036d4d20.jpg" 
-                alt="Остеопат Сергей"
-                className="rounded-3xl shadow-2xl w-full relative premium-shadow"
-              />
             </div>
           </div>
         </div>
