@@ -27,9 +27,12 @@ const Index = () => {
       <header className="fixed top-0 left-0 right-0 glass z-50">
         <div className="container mx-auto px-6 py-5 flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center shadow-md">
-              <Icon name="Activity" className="text-white" size={26} />
-            </div>
+            <svg className="w-12 h-12" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="10" className="fill-primary"/>
+              <path d="M16 20C16 20 18 18 20 20C22 22 22 24 24 26C26 28 26 28 28 26C30 24 32 22 32 22" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <circle cx="20" cy="19" r="1.5" fill="white"/>
+              <circle cx="28" cy="27" r="1.5" fill="white"/>
+            </svg>
             <h1 className="text-2xl font-heading font-extrabold text-primary">Остеопат<span className="text-accent">+</span></h1>
           </div>
           <nav className="hidden md:flex gap-8">
@@ -108,8 +111,8 @@ const Index = () => {
                   Член Российской остеопатической ассоциации.
                 </p>
                 <p>
-                  За годы практики помог тысячам пациентов избавиться от болей в спине, шее, улучшить осанку 
-                  и общее самочувствие. Специализируется на работе с офисными сотрудниками, спортсменами 
+                  За годы практики работал с тысячами людей, помогая улучшить самочувствие при болях в спине и шее, 
+                  восстановить осанку. Специализируется на работе с офисными сотрудниками, спортсменами 
                   и беременными женщинами.
                 </p>
                 <div className="grid grid-cols-2 gap-4 pt-4">
@@ -124,7 +127,7 @@ const Index = () => {
                     <Icon name="Users" className="text-primary mt-1" size={24} />
                     <div>
                       <div className="font-semibold text-foreground">3000+</div>
-                      <div className="text-sm">пациентов</div>
+                      <div className="text-sm">консультаций</div>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -158,7 +161,7 @@ const Index = () => {
               Для кого
             </h2>
             <p className="text-center text-muted-foreground text-xl max-w-2xl mx-auto">
-              Остеопатия помогает разным категориям пациентов
+              Остеопатия помогает разным людям улучшить качество жизни
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -169,8 +172,8 @@ const Index = () => {
                 </div>
                 <h3 className="text-2xl font-heading font-extrabold mb-4 text-foreground">Офисные сотрудники</h3>
                 <p className="text-muted-foreground text-lg leading-relaxed">
-                  Снимаем боли в спине, шее и мышечное напряжение от сидячей работы. 
-                  Восстанавливаем правильную осанку.
+                  Помощь при болях в спине, шее и мышечном напряжении от сидячей работы. 
+                  Восстановление правильной осанки.
                 </p>
               </CardContent>
             </Card>
@@ -224,7 +227,7 @@ const Index = () => {
               </div>
               <h3 className="text-xl font-heading font-bold mb-3 text-foreground">Индивидуальный подход</h3>
               <p className="text-muted-foreground text-sm">
-                Каждый пациент уникален, подбираем методику под ваши задачи
+                Каждый человек уникален, подбираем методику под ваши задачи
               </p>
             </div>
 
@@ -273,7 +276,7 @@ const Index = () => {
               💙 Отзывы
             </div>
             <h2 className="text-5xl font-heading font-extrabold mb-4 text-primary">
-              Мнения пациентов
+              Отзывы клиентов
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -294,7 +297,7 @@ const Index = () => {
                   ))}
                 </div>
                 <p className="text-muted-foreground text-base leading-relaxed">
-                  Обратилась с болями в шее после работы за компьютером. После трёх сеансов боль полностью ушла. 
+                  Обратилась с болями в шее после работы за компьютером. После трёх сеансов состояние значительно улучшилось. 
                   Сергей Иванович — настоящий профессионал!
                 </p>
               </CardContent>
@@ -317,7 +320,7 @@ const Index = () => {
                   ))}
                 </div>
                 <p className="text-muted-foreground text-base leading-relaxed">
-                  Занимаюсь кроссфитом, постоянно были проблемы со спиной. После курса остеопатии восстановился 
+                  Занимаюсь кроссфитом, постоянно были проблемы со спиной. После курса сеансов восстановился 
                   быстрее обычного и улучшил результаты.
                 </p>
               </CardContent>
@@ -340,7 +343,7 @@ const Index = () => {
                   ))}
                 </div>
                 <p className="text-muted-foreground text-base leading-relaxed">
-                  Во время беременности появились боли в пояснице. Сергей помог безопасными методами, 
+                  Во время беременности появились боли в пояснице. Сергей Иванович помог безопасными методами, 
                   самочувствие значительно улучшилось. Рекомендую!
                 </p>
               </CardContent>
@@ -472,8 +475,8 @@ const Index = () => {
               <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-sm mb-4">
                 ❓ FAQ
               </div>
-              <h2 className="text-5xl font-heading font-extrabold mb-4">
-                <span className="text-gradient">Частые вопросы</span>
+              <h2 className="text-5xl font-heading font-extrabold mb-4 text-primary">
+                Частые вопросы
               </h2>
             </div>
             <Accordion type="single" collapsible className="space-y-6">
@@ -522,8 +525,8 @@ const Index = () => {
                   Сколько сеансов потребуется?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
-                  Количество сеансов индивидуально и зависит от проблемы. В среднем курс составляет 3-5 сеансов. 
-                  После первой консультации составляется персональный план лечения.
+                  Количество сеансов индивидуально и зависит от задач. В среднем курс составляет 3-5 сеансов. 
+                  После первой консультации составляется персональный план работы.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -536,9 +539,12 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-12">
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center shadow-md">
-                  <Icon name="Activity" className="text-white" size={26} />
-                </div>
+                <svg className="w-12 h-12" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="48" height="48" rx="10" className="fill-accent"/>
+                  <path d="M16 20C16 20 18 18 20 20C22 22 22 24 24 26C26 28 26 28 28 26C30 24 32 22 32 22" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <circle cx="20" cy="19" r="1.5" fill="white"/>
+                  <circle cx="28" cy="27" r="1.5" fill="white"/>
+                </svg>
                 <h3 className="text-2xl font-heading font-extrabold">Остеопат<span className="text-accent">+</span></h3>
               </div>
               <p className="text-white/80 mb-6 text-lg">
