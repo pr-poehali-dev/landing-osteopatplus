@@ -46,18 +46,10 @@ const Index = () => {
         </div>
       </header>
 
-      <section className="pt-36 pb-24 relative overflow-hidden min-h-screen flex items-center">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/bucket/2291e50a-e4f9-49ca-908b-8a23aef3bb4f.png" 
-            alt="Остеопат Сергей"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/60 to-white/20"></div>
-        </div>
+      <section className="pt-36 pb-24 relative overflow-hidden min-h-screen flex items-center bg-gradient-to-br from-blue-50 via-white to-blue-50">
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-2xl">
-            <div className="animate-fade-in bg-white/95 backdrop-blur-sm p-12 rounded-3xl shadow-2xl border border-primary/10">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="animate-fade-in">
               <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-sm mb-6">
                 ✨ 17 лет опыта
               </div>
@@ -65,7 +57,7 @@ const Index = () => {
                 Остеопатия<br/>
                 <span className="text-primary">для вашего здоровья</span>
               </h1>
-              <p className="text-xl text-foreground mb-10 leading-relaxed">
+              <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
                 Индивидуальный подход к офисным сотрудникам, спортсменам и беременным. 
                 Безопасные методики с доказанной эффективностью.
               </p>
@@ -83,6 +75,13 @@ const Index = () => {
                   WhatsApp
                 </Button>
               </div>
+            </div>
+            <div className="animate-scale-in">
+              <img 
+                src="https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/bucket/2291e50a-e4f9-49ca-908b-8a23aef3bb4f.png" 
+                alt="Остеопат Сергей"
+                className="rounded-3xl shadow-2xl w-full premium-shadow"
+              />
             </div>
           </div>
         </div>
