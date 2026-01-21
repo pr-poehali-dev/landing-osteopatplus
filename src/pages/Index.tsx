@@ -23,14 +23,14 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-orange-50">
-      <header className="fixed top-0 left-0 right-0 glass z-50 border-b border-white/20">
+    <div className="min-h-screen bg-gray-50">
+      <header className="fixed top-0 left-0 right-0 glass z-50">
         <div className="container mx-auto px-6 py-5 flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center shadow-lg">
+            <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center shadow-md">
               <Icon name="Activity" className="text-white" size={26} />
             </div>
-            <h1 className="text-2xl font-heading font-extrabold"><span className="text-gradient">Остеопат+</span></h1>
+            <h1 className="text-2xl font-heading font-extrabold text-primary">Остеопат<span className="text-accent">+</span></h1>
           </div>
           <nav className="hidden md:flex gap-8">
             <a href="#about" className="text-foreground hover:text-primary transition-all duration-300 font-medium">О специалисте</a>
@@ -38,30 +38,29 @@ const Index = () => {
             <a href="#reviews" className="text-foreground hover:text-primary transition-all duration-300 font-medium">Отзывы</a>
             <a href="#contacts" className="text-foreground hover:text-primary transition-all duration-300 font-medium">Контакты</a>
           </nav>
-          <Button onClick={scrollToForm} className="bg-gradient-to-r from-accent to-orange-500 hover:shadow-2xl transition-all duration-300 font-semibold">
+          <Button onClick={scrollToForm} className="bg-accent hover:bg-accent/90 transition-all duration-300 font-semibold">
             Записаться
           </Button>
         </div>
       </header>
 
-      <section className="pt-36 pb-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
+      <section className="pt-36 pb-24 bg-white relative overflow-hidden">
         <div className="container mx-auto px-6 relative">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="animate-fade-in">
               <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-sm mb-6">
                 ✨ 17 лет опыта
               </div>
-              <h1 className="text-5xl md:text-7xl font-heading font-extrabold mb-6 leading-[1.1]">
-                <span className="text-gradient">Остеопатия</span><br/>
-                <span className="text-foreground">для вашего здоровья</span>
+              <h1 className="text-5xl md:text-7xl font-heading font-extrabold mb-6 leading-[1.1] text-foreground">
+                Остеопатия<br/>
+                <span className="text-primary">для вашего здоровья</span>
               </h1>
               <p className="text-xl text-muted-foreground mb-10 leading-relaxed max-w-xl">
                 Индивидуальный подход к офисным сотрудникам, спортсменам и беременным. 
                 Безопасные методики с доказанной эффективностью.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button onClick={scrollToForm} size="lg" className="bg-gradient-to-r from-accent to-orange-500 hover:shadow-2xl transition-all duration-300 text-lg px-10 py-7 font-semibold">
+                <Button onClick={scrollToForm} size="lg" className="bg-accent hover:bg-accent/90 transition-all duration-300 text-lg px-10 py-7 font-semibold">
                   Записаться на консультацию
                 </Button>
                 <Button 
@@ -76,7 +75,6 @@ const Index = () => {
               </div>
             </div>
             <div className="animate-scale-in relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary to-accent rounded-3xl blur-2xl opacity-20"></div>
               <img 
                 src="https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/files/7b36ae29-bc2c-4161-aaa0-9f84036d4d20.jpg" 
                 alt="Остеопат Сергей"
@@ -101,8 +99,8 @@ const Index = () => {
               <div className="inline-block px-4 py-2 bg-accent/10 rounded-full text-accent font-semibold text-sm mb-4">
                 💼 Профессионал
               </div>
-              <h2 className="text-5xl font-heading font-extrabold mb-8">
-                <span className="text-gradient">О специалисте</span>
+              <h2 className="text-5xl font-heading font-extrabold mb-8 text-primary">
+                О специалисте
               </h2>
               <div className="space-y-4 text-lg text-muted-foreground">
                 <p>
@@ -150,14 +148,14 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="services" className="py-24 bg-gradient-to-b from-white to-blue-50 relative">
+      <section id="services" className="py-24 bg-white relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-sm mb-4">
               🎯 Целевая аудитория
             </div>
-            <h2 className="text-5xl font-heading font-extrabold mb-4">
-              <span className="text-gradient">Для кого</span>
+            <h2 className="text-5xl font-heading font-extrabold mb-4 text-primary">
+              Для кого
             </h2>
             <p className="text-center text-muted-foreground text-xl max-w-2xl mx-auto">
               Остеопатия помогает разным категориям пациентов
@@ -166,7 +164,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="premium-card hover:-translate-y-2 transition-all duration-300 group">
               <CardContent className="pt-8 text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-md group-hover:scale-110 transition-transform">
                   <Icon name="Briefcase" className="text-white" size={36} />
                 </div>
                 <h3 className="text-2xl font-heading font-extrabold mb-4 text-foreground">Офисные сотрудники</h3>
@@ -179,7 +177,7 @@ const Index = () => {
 
             <Card className="premium-card hover:-translate-y-2 transition-all duration-300 group">
               <CardContent className="pt-8 text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-md group-hover:scale-110 transition-transform">
                   <Icon name="Dumbbell" className="text-white" size={36} />
                 </div>
                 <h3 className="text-2xl font-heading font-extrabold mb-4 text-foreground">Спортсмены</h3>
@@ -192,7 +190,7 @@ const Index = () => {
 
             <Card className="premium-card hover:-translate-y-2 transition-all duration-300 group">
               <CardContent className="pt-8 text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-md group-hover:scale-110 transition-transform">
                   <Icon name="Heart" className="text-white" size={36} />
                 </div>
                 <h3 className="text-2xl font-heading font-extrabold mb-4 text-foreground">Беременные</h3>
@@ -212,8 +210,8 @@ const Index = () => {
             <div className="inline-block px-4 py-2 bg-accent/10 rounded-full text-accent font-semibold text-sm mb-4">
               ✨ Преимущества
             </div>
-            <h2 className="text-5xl font-heading font-extrabold mb-4">
-              <span className="text-gradient">Методы работы</span>
+            <h2 className="text-5xl font-heading font-extrabold mb-4 text-primary">
+              Методы работы
             </h2>
             <p className="text-center text-muted-foreground text-xl max-w-2xl mx-auto">
               Эффективные техники остеопатии
@@ -221,7 +219,7 @@ const Index = () => {
           </div>
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center p-6 rounded-2xl hover:bg-gradient-to-br hover:from-primary/5 hover:to-accent/5 transition-all duration-300">
-              <div className="w-24 h-24 bg-gradient-to-br from-accent/20 to-accent/10 rounded-3xl flex items-center justify-center mx-auto mb-6">
+              <div className="w-24 h-24 bg-accent/10 rounded-3xl flex items-center justify-center mx-auto mb-6">
                 <Icon name="User" className="text-accent" size={44} />
               </div>
               <h3 className="text-xl font-heading font-bold mb-3 text-foreground">Индивидуальный подход</h3>
@@ -231,7 +229,7 @@ const Index = () => {
             </div>
 
             <div className="text-center p-6 rounded-2xl hover:bg-gradient-to-br hover:from-primary/5 hover:to-accent/5 transition-all duration-300">
-              <div className="w-24 h-24 bg-gradient-to-br from-accent/20 to-accent/10 rounded-3xl flex items-center justify-center mx-auto mb-6">
+              <div className="w-24 h-24 bg-accent/10 rounded-3xl flex items-center justify-center mx-auto mb-6">
                 <Icon name="Search" className="text-accent" size={44} />
               </div>
               <h3 className="text-xl font-heading font-bold mb-3 text-foreground">Комплексная диагностика</h3>
@@ -241,7 +239,7 @@ const Index = () => {
             </div>
 
             <div className="text-center p-6 rounded-2xl hover:bg-gradient-to-br hover:from-primary/5 hover:to-accent/5 transition-all duration-300">
-              <div className="w-24 h-24 bg-gradient-to-br from-accent/20 to-accent/10 rounded-3xl flex items-center justify-center mx-auto mb-6">
+              <div className="w-24 h-24 bg-accent/10 rounded-3xl flex items-center justify-center mx-auto mb-6">
                 <Icon name="Zap" className="text-accent" size={44} />
               </div>
               <h3 className="text-xl font-heading font-bold mb-3 text-foreground">Эффективные техники</h3>
@@ -251,7 +249,7 @@ const Index = () => {
             </div>
 
             <div className="text-center p-6 rounded-2xl hover:bg-gradient-to-br hover:from-primary/5 hover:to-accent/5 transition-all duration-300">
-              <div className="w-24 h-24 bg-gradient-to-br from-accent/20 to-accent/10 rounded-3xl flex items-center justify-center mx-auto mb-6">
+              <div className="w-24 h-24 bg-accent/10 rounded-3xl flex items-center justify-center mx-auto mb-6">
                 <Icon name="Video" className="text-accent" size={44} />
               </div>
               <h3 className="text-xl font-heading font-bold mb-3 text-foreground">Онлайн-консультации</h3>
@@ -261,28 +259,28 @@ const Index = () => {
             </div>
           </div>
           <div className="text-center mt-16">
-            <Button onClick={scrollToForm} size="lg" className="bg-gradient-to-r from-accent to-orange-500 hover:shadow-2xl transition-all duration-300 text-lg px-10 py-7 font-semibold">
+            <Button onClick={scrollToForm} size="lg" className="bg-accent hover:bg-accent/90 transition-all duration-300 text-lg px-10 py-7 font-semibold">
               Записаться на консультацию
             </Button>
           </div>
         </div>
       </section>
 
-      <section id="reviews" className="py-24 bg-gradient-to-b from-blue-50 to-white relative">
+      <section id="reviews" className="py-24 bg-gray-50 relative">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-sm mb-4">
               💙 Отзывы
             </div>
-            <h2 className="text-5xl font-heading font-extrabold mb-4">
-              <span className="text-gradient">Мнения пациентов</span>
+            <h2 className="text-5xl font-heading font-extrabold mb-4 text-primary">
+              Мнения пациентов
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="premium-card hover:-translate-y-1 transition-all duration-300">
               <CardContent className="pt-8">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center shadow-lg">
+                  <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center shadow-md">
                     <Icon name="User" className="text-white" size={28} />
                   </div>
                   <div>
@@ -305,7 +303,7 @@ const Index = () => {
             <Card className="premium-card hover:-translate-y-1 transition-all duration-300">
               <CardContent className="pt-8">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center shadow-lg">
+                  <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center shadow-md">
                     <Icon name="User" className="text-white" size={28} />
                   </div>
                   <div>
@@ -328,7 +326,7 @@ const Index = () => {
             <Card className="premium-card hover:-translate-y-1 transition-all duration-300">
               <CardContent className="pt-8">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center shadow-lg">
+                  <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center shadow-md">
                     <Icon name="User" className="text-white" size={28} />
                   </div>
                   <div>
@@ -351,8 +349,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-24 bg-gradient-to-br from-orange-50 to-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent"></div>
+      <section className="py-24 bg-white relative overflow-hidden">
         <div className="container mx-auto px-6 relative">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -360,9 +357,9 @@ const Index = () => {
                 <div className="inline-block px-4 py-2 bg-accent/10 rounded-full text-accent font-semibold text-sm mb-4">
                   🎓 Образование
                 </div>
-                <h2 className="text-5xl font-heading font-extrabold mb-6">
-                  <span className="text-gradient">Онлайн-курсы</span><br/>
-                  <span className="text-foreground">Док диалог</span>
+                <h2 className="text-5xl font-heading font-extrabold mb-6 text-primary">
+                  Онлайн-курсы<br/>
+                  <span className="text-accent">Док диалог</span>
                 </h2>
                 <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
                   Экосистема для специалистов в области остеопатии, мануальной терапии и реабилитации. 
@@ -388,12 +385,11 @@ const Index = () => {
                     <span className="text-lg">Сообщество практиков</span>
                   </li>
                 </ul>
-                <Button className="bg-gradient-to-r from-primary to-accent hover:shadow-2xl transition-all duration-300 text-lg px-10 py-7 font-semibold">
+                <Button className="bg-primary hover:bg-primary/90 transition-all duration-300 text-lg px-10 py-7 font-semibold">
                   Узнать больше о курсах
                 </Button>
               </div>
               <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-r from-accent to-orange-500 rounded-3xl blur-2xl opacity-20"></div>
                 <img 
                   src="https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/files/83e06056-2243-48bd-820e-a86a722b53a5.jpg" 
                   alt="Обучение остеопатии"
@@ -405,8 +401,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="booking-form" className="py-24 bg-gradient-to-br from-primary via-primary to-accent text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(255,255,255,0.1),transparent)]"></div>
+      <section id="booking-form" className="py-24 bg-primary text-white relative overflow-hidden">
         <div className="container mx-auto px-6 relative">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-10">
@@ -450,7 +445,7 @@ const Index = () => {
                     />
                   </div>
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button type="submit" className="flex-1 bg-gradient-to-r from-accent to-orange-500 hover:shadow-2xl transition-all duration-300 text-lg py-7 font-semibold">
+                    <Button type="submit" className="flex-1 bg-accent hover:bg-accent/90 transition-all duration-300 text-lg py-7 font-semibold">
                       Записаться онлайн
                     </Button>
                     <Button 
@@ -536,13 +531,12 @@ const Index = () => {
         </div>
       </section>
 
-      <footer id="contacts" className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(30,144,255,0.1),transparent)]"></div>
+      <footer id="contacts" className="bg-gray-900 text-white py-16 relative overflow-hidden">
         <div className="container mx-auto px-6 relative">
           <div className="grid md:grid-cols-3 gap-12">
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center shadow-lg">
+                <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center shadow-md">
                   <Icon name="Activity" className="text-white" size={26} />
                 </div>
                 <h3 className="text-2xl font-heading font-extrabold">Остеопат<span className="text-accent">+</span></h3>
@@ -551,10 +545,10 @@ const Index = () => {
                 Остеопатия с 17-летним опытом. Забота о вашем здоровье.
               </p>
               <div className="flex gap-3">
-                <a href="#" className="w-12 h-12 bg-white/10 hover:bg-gradient-to-br hover:from-primary hover:to-accent rounded-xl flex items-center justify-center transition-all duration-300">
+                <a href="#" className="w-12 h-12 bg-white/10 hover:bg-accent rounded-xl flex items-center justify-center transition-all duration-300">
                   <Icon name="Instagram" size={22} />
                 </a>
-                <a href="#" className="w-12 h-12 bg-white/10 hover:bg-gradient-to-br hover:from-primary hover:to-accent rounded-xl flex items-center justify-center transition-all duration-300">
+                <a href="#" className="w-12 h-12 bg-white/10 hover:bg-accent rounded-xl flex items-center justify-center transition-all duration-300">
                   <Icon name="Send" size={22} />
                 </a>
               </div>

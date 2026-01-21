@@ -15,7 +15,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 20%;
 
-    --primary: 207 91% 56%;
+    --primary: 215 25% 27%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 40% 96.1%;
@@ -24,7 +24,7 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 27 100% 60%;
+    --accent: 142 71% 45%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -113,23 +113,19 @@
 }
 
 @layer utilities {
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
-  }
-
   .glass {
-    @apply bg-white/80 backdrop-blur-xl border border-white/20 shadow-xl;
+    @apply bg-white/95 backdrop-blur-sm border border-gray-200 shadow-lg;
   }
 
   .premium-shadow {
-    box-shadow: 0 20px 60px rgba(30, 144, 255, 0.15);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
   }
 
   .premium-card {
-    @apply bg-white rounded-2xl p-8 shadow-2xl transition-all duration-300 border border-gray-100;
+    @apply bg-white rounded-xl p-8 shadow-lg transition-all duration-300 border border-gray-200;
   }
 
   .premium-card:hover {
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
   }
 }
