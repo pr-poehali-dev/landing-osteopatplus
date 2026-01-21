@@ -28,11 +28,9 @@ const Index = () => {
         <div className="container mx-auto px-6 py-5 flex justify-between items-center">
           <div className="flex items-center gap-3">
             <svg className="w-12 h-12" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="48" height="48" rx="10" className="fill-primary"/>
-              <circle cx="24" cy="18" r="6" fill="white"/>
-              <path d="M14 34C14 28 18 26 24 26C30 26 34 28 34 34" stroke="white" strokeWidth="3" strokeLinecap="round"/>
-              <circle cx="18" cy="20" r="1.5" fill="white"/>
-              <circle cx="30" cy="20" r="1.5" fill="white"/>
+              <path d="M24 4 C14 4 8 10 8 18 C8 24 12 28 16 32 L18 34 C20 36 22 38 24 40 C26 38 28 36 30 34 L32 32 C36 28 40 24 40 18 C40 10 34 4 24 4 Z" className="fill-primary"/>
+              <circle cx="24" cy="18" r="4" fill="white"/>
+              <path d="M18 18 L24 24 L30 18" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
             <h1 className="text-2xl font-heading font-extrabold text-primary">Остеопат<span className="text-accent">+</span></h1>
           </div>
@@ -541,10 +539,9 @@ const Index = () => {
             <div>
               <div className="flex items-center gap-3 mb-6">
                 <svg className="w-12 h-12" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="48" height="48" rx="10" className="fill-accent"/>
-                  <path d="M16 20C16 20 18 18 20 20C22 22 22 24 24 26C26 28 26 28 28 26C30 24 32 22 32 22" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  <circle cx="20" cy="19" r="1.5" fill="white"/>
-                  <circle cx="28" cy="27" r="1.5" fill="white"/>
+                  <path d="M24 4 C14 4 8 10 8 18 C8 24 12 28 16 32 L18 34 C20 36 22 38 24 40 C26 38 28 36 30 34 L32 32 C36 28 40 24 40 18 C40 10 34 4 24 4 Z" className="fill-accent"/>
+                  <circle cx="24" cy="18" r="4" fill="white"/>
+                  <path d="M18 18 L24 24 L30 18" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
                 <h3 className="text-2xl font-heading font-extrabold">Остеопат<span className="text-accent">+</span></h3>
               </div>
