@@ -169,12 +169,12 @@ const Index = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="premium-card hover:-translate-y-2 transition-all duration-300 group overflow-hidden">
-              <div className="relative h-64 overflow-hidden">
+            <Card className="premium-card hover:-translate-y-2 transition-all duration-300 group">
+              <div className="relative h-64 overflow-hidden rounded-3xl m-6 mb-0">
                 <img 
                   src="https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/files/63634725-2e4d-4e0b-80e6-28821e8c2c1c.jpg"
                   alt="Офисные сотрудники"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded-3xl border-4 border-white shadow-xl"
                 />
               </div>
               <CardContent className="pt-8 text-center">
@@ -186,12 +186,12 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="premium-card hover:-translate-y-2 transition-all duration-300 group overflow-hidden">
-              <div className="relative h-64 overflow-hidden">
+            <Card className="premium-card hover:-translate-y-2 transition-all duration-300 group">
+              <div className="relative h-64 overflow-hidden rounded-3xl m-6 mb-0">
                 <img 
                   src="https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/files/b969ad8e-844c-4612-8db2-acecc79725cb.jpg"
                   alt="Спортсмены"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded-3xl border-4 border-white shadow-xl"
                 />
               </div>
               <CardContent className="pt-8 text-center">
@@ -203,12 +203,12 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="premium-card hover:-translate-y-2 transition-all duration-300 group overflow-hidden">
-              <div className="relative h-64 overflow-hidden">
+            <Card className="premium-card hover:-translate-y-2 transition-all duration-300 group">
+              <div className="relative h-64 overflow-hidden rounded-3xl m-6 mb-0">
                 <img 
                   src="https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/files/c4ea56d0-dbb0-4e8f-9092-0b5fb2be92b1.jpg"
                   alt="Беременные"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded-3xl border-4 border-white shadow-xl"
                 />
               </div>
               <CardContent className="pt-8 text-center">
