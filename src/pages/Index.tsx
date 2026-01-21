@@ -169,11 +169,15 @@ const Index = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="premium-card hover:-translate-y-2 transition-all duration-300 group">
+            <Card className="premium-card hover:-translate-y-2 transition-all duration-300 group overflow-hidden">
+              <div className="relative h-64 overflow-hidden">
+                <img 
+                  src="https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/files/63634725-2e4d-4e0b-80e6-28821e8c2c1c.jpg"
+                  alt="Офисные сотрудники"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
               <CardContent className="pt-8 text-center">
-                <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-md group-hover:scale-110 transition-transform">
-                  <Icon name="Briefcase" className="text-white" size={36} />
-                </div>
                 <h3 className="text-2xl font-heading font-extrabold mb-4 text-foreground">Офисные сотрудники</h3>
                 <p className="text-muted-foreground text-lg leading-relaxed">
                   Помощь при болях в спине, шее и мышечном напряжении от сидячей работы. 
@@ -182,11 +186,15 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="premium-card hover:-translate-y-2 transition-all duration-300 group">
+            <Card className="premium-card hover:-translate-y-2 transition-all duration-300 group overflow-hidden">
+              <div className="relative h-64 overflow-hidden">
+                <img 
+                  src="https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/files/b969ad8e-844c-4612-8db2-acecc79725cb.jpg"
+                  alt="Спортсмены"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
               <CardContent className="pt-8 text-center">
-                <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-md group-hover:scale-110 transition-transform">
-                  <Icon name="Dumbbell" className="text-white" size={36} />
-                </div>
                 <h3 className="text-2xl font-heading font-extrabold mb-4 text-foreground">Спортсмены</h3>
                 <p className="text-muted-foreground text-lg leading-relaxed">
                   Восстанавливаем мышцы и суставы после тренировок. 
@@ -195,11 +203,15 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="premium-card hover:-translate-y-2 transition-all duration-300 group">
+            <Card className="premium-card hover:-translate-y-2 transition-all duration-300 group overflow-hidden">
+              <div className="relative h-64 overflow-hidden">
+                <img 
+                  src="https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/files/c4ea56d0-dbb0-4e8f-9092-0b5fb2be92b1.jpg"
+                  alt="Беременные"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
               <CardContent className="pt-8 text-center">
-                <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-md group-hover:scale-110 transition-transform">
-                  <Icon name="Heart" className="text-white" size={36} />
-                </div>
                 <h3 className="text-2xl font-heading font-extrabold mb-4 text-foreground">Беременные</h3>
                 <p className="text-muted-foreground text-lg leading-relaxed">
                   Безопасные методики для поддержки здоровья мамы и малыша. 
