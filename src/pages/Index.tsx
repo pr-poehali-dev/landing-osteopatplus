@@ -23,65 +23,71 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 border-b">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-orange-50">
+      <header className="fixed top-0 left-0 right-0 glass z-50 border-b border-white/20">
+        <div className="container mx-auto px-6 py-5 flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <Icon name="Activity" className="text-white" size={24} />
+            <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center shadow-lg">
+              <Icon name="Activity" className="text-white" size={26} />
             </div>
-            <h1 className="text-2xl font-heading font-bold text-primary">Остеопат<span className="text-accent">+</span></h1>
+            <h1 className="text-2xl font-heading font-extrabold"><span className="text-gradient">Остеопат+</span></h1>
           </div>
-          <nav className="hidden md:flex gap-6">
-            <a href="#about" className="text-foreground hover:text-primary transition-colors">О специалисте</a>
-            <a href="#services" className="text-foreground hover:text-primary transition-colors">Услуги</a>
-            <a href="#reviews" className="text-foreground hover:text-primary transition-colors">Отзывы</a>
-            <a href="#contacts" className="text-foreground hover:text-primary transition-colors">Контакты</a>
+          <nav className="hidden md:flex gap-8">
+            <a href="#about" className="text-foreground hover:text-primary transition-all duration-300 font-medium">О специалисте</a>
+            <a href="#services" className="text-foreground hover:text-primary transition-all duration-300 font-medium">Услуги</a>
+            <a href="#reviews" className="text-foreground hover:text-primary transition-all duration-300 font-medium">Отзывы</a>
+            <a href="#contacts" className="text-foreground hover:text-primary transition-all duration-300 font-medium">Контакты</a>
           </nav>
-          <Button onClick={scrollToForm} className="bg-accent hover:bg-accent/90">
+          <Button onClick={scrollToForm} className="bg-gradient-to-r from-accent to-orange-500 hover:shadow-2xl transition-all duration-300 font-semibold">
             Записаться
           </Button>
         </div>
       </header>
 
-      <section className="pt-32 pb-20 bg-gradient-to-br from-blue-50 to-white">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      <section className="pt-36 pb-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
+        <div className="container mx-auto px-6 relative">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="animate-fade-in">
-              <h1 className="text-5xl md:text-6xl font-heading font-bold text-primary mb-6 leading-tight">
-                Остеопат с 17-летним опытом
+              <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-sm mb-6">
+                ✨ 17 лет опыта
+              </div>
+              <h1 className="text-5xl md:text-7xl font-heading font-extrabold mb-6 leading-[1.1]">
+                <span className="text-gradient">Остеопатия</span><br/>
+                <span className="text-foreground">для вашего здоровья</span>
               </h1>
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Забота о вашем здоровье и самочувствии. Принимаю офисных сотрудников, спортсменов и беременных. 
-                Индивидуальный подход, безопасные методики, видимый результат.
+              <p className="text-xl text-muted-foreground mb-10 leading-relaxed max-w-xl">
+                Индивидуальный подход к офисным сотрудникам, спортсменам и беременным. 
+                Безопасные методики с доказанной эффективностью.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button onClick={scrollToForm} size="lg" className="bg-accent hover:bg-accent/90 text-lg px-8">
+                <Button onClick={scrollToForm} size="lg" className="bg-gradient-to-r from-accent to-orange-500 hover:shadow-2xl transition-all duration-300 text-lg px-10 py-7 font-semibold">
                   Записаться на консультацию
                 </Button>
                 <Button 
                   variant="outline" 
                   size="lg"
                   onClick={() => window.open('https://wa.me/79000000000', '_blank')}
-                  className="text-lg px-8"
+                  className="text-lg px-10 py-7 font-semibold border-2 hover:bg-primary/5"
                 >
-                  <Icon name="MessageCircle" size={20} className="mr-2" />
+                  <Icon name="MessageCircle" size={22} className="mr-2" />
                   WhatsApp
                 </Button>
               </div>
             </div>
-            <div className="animate-scale-in">
+            <div className="animate-scale-in relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary to-accent rounded-3xl blur-2xl opacity-20"></div>
               <img 
                 src="https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/files/7b36ae29-bc2c-4161-aaa0-9f84036d4d20.jpg" 
                 alt="Остеопат Сергей"
-                className="rounded-2xl shadow-2xl w-full"
+                className="rounded-3xl shadow-2xl w-full relative premium-shadow"
               />
             </div>
           </div>
         </div>
       </section>
 
-      <section id="about" className="py-20 bg-white">
+      <section id="about" className="py-24 bg-white relative">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
@@ -92,7 +98,12 @@ const Index = () => {
               />
             </div>
             <div className="order-1 md:order-2">
-              <h2 className="text-4xl font-heading font-bold text-primary mb-6">О специалисте</h2>
+              <div className="inline-block px-4 py-2 bg-accent/10 rounded-full text-accent font-semibold text-sm mb-4">
+                💼 Профессионал
+              </div>
+              <h2 className="text-5xl font-heading font-extrabold mb-8">
+                <span className="text-gradient">О специалисте</span>
+              </h2>
               <div className="space-y-4 text-lg text-muted-foreground">
                 <p>
                   <strong className="text-foreground">Сергей Иванович</strong> — врач-остеопат с 17-летним опытом работы. 
@@ -139,46 +150,53 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="services" className="py-20 bg-secondary/30">
+      <section id="services" className="py-24 bg-gradient-to-b from-white to-blue-50 relative">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-heading font-bold text-center text-primary mb-4">Для кого</h2>
-          <p className="text-center text-muted-foreground mb-12 text-lg">
-            Остеопатия помогает разным категориям пациентов
-          </p>
+          <div className="text-center mb-16">
+            <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-sm mb-4">
+              🎯 Целевая аудитория
+            </div>
+            <h2 className="text-5xl font-heading font-extrabold mb-4">
+              <span className="text-gradient">Для кого</span>
+            </h2>
+            <p className="text-center text-muted-foreground text-xl max-w-2xl mx-auto">
+              Остеопатия помогает разным категориям пациентов
+            </p>
+          </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="premium-card hover:-translate-y-2 transition-all duration-300 group">
               <CardContent className="pt-8 text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name="Briefcase" className="text-primary" size={32} />
+                <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                  <Icon name="Briefcase" className="text-white" size={36} />
                 </div>
-                <h3 className="text-2xl font-heading font-bold mb-3">Офисные сотрудники</h3>
-                <p className="text-muted-foreground">
+                <h3 className="text-2xl font-heading font-extrabold mb-4 text-foreground">Офисные сотрудники</h3>
+                <p className="text-muted-foreground text-lg leading-relaxed">
                   Снимаем боли в спине, шее и мышечное напряжение от сидячей работы. 
                   Восстанавливаем правильную осанку.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="premium-card hover:-translate-y-2 transition-all duration-300 group">
               <CardContent className="pt-8 text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name="Dumbbell" className="text-primary" size={32} />
+                <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                  <Icon name="Dumbbell" className="text-white" size={36} />
                 </div>
-                <h3 className="text-2xl font-heading font-bold mb-3">Спортсмены</h3>
-                <p className="text-muted-foreground">
+                <h3 className="text-2xl font-heading font-extrabold mb-4 text-foreground">Спортсмены</h3>
+                <p className="text-muted-foreground text-lg leading-relaxed">
                   Восстанавливаем мышцы и суставы после тренировок. 
                   Улучшаем спортивные результаты и предотвращаем травмы.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="premium-card hover:-translate-y-2 transition-all duration-300 group">
               <CardContent className="pt-8 text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name="Heart" className="text-primary" size={32} />
+                <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                  <Icon name="Heart" className="text-white" size={36} />
                 </div>
-                <h3 className="text-2xl font-heading font-bold mb-3">Беременные</h3>
-                <p className="text-muted-foreground">
+                <h3 className="text-2xl font-heading font-extrabold mb-4 text-foreground">Беременные</h3>
+                <p className="text-muted-foreground text-lg leading-relaxed">
                   Безопасные методики для поддержки здоровья мамы и малыша. 
                   Помогаем подготовиться к родам.
                 </p>
@@ -188,128 +206,142 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-heading font-bold text-center text-primary mb-4">Методы работы</h2>
-          <p className="text-center text-muted-foreground mb-12 text-lg">
-            Эффективные техники остеопатии
-          </p>
-          <div className="grid md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Icon name="User" className="text-accent" size={40} />
+      <section className="py-24 bg-white relative">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <div className="inline-block px-4 py-2 bg-accent/10 rounded-full text-accent font-semibold text-sm mb-4">
+              ✨ Преимущества
+            </div>
+            <h2 className="text-5xl font-heading font-extrabold mb-4">
+              <span className="text-gradient">Методы работы</span>
+            </h2>
+            <p className="text-center text-muted-foreground text-xl max-w-2xl mx-auto">
+              Эффективные техники остеопатии
+            </p>
+          </div>
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center p-6 rounded-2xl hover:bg-gradient-to-br hover:from-primary/5 hover:to-accent/5 transition-all duration-300">
+              <div className="w-24 h-24 bg-gradient-to-br from-accent/20 to-accent/10 rounded-3xl flex items-center justify-center mx-auto mb-6">
+                <Icon name="User" className="text-accent" size={44} />
               </div>
-              <h3 className="text-xl font-heading font-semibold mb-2">Индивидуальный подход</h3>
+              <h3 className="text-xl font-heading font-bold mb-3 text-foreground">Индивидуальный подход</h3>
               <p className="text-muted-foreground text-sm">
                 Каждый пациент уникален, подбираем методику под ваши задачи
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Icon name="Search" className="text-accent" size={40} />
+            <div className="text-center p-6 rounded-2xl hover:bg-gradient-to-br hover:from-primary/5 hover:to-accent/5 transition-all duration-300">
+              <div className="w-24 h-24 bg-gradient-to-br from-accent/20 to-accent/10 rounded-3xl flex items-center justify-center mx-auto mb-6">
+                <Icon name="Search" className="text-accent" size={44} />
               </div>
-              <h3 className="text-xl font-heading font-semibold mb-2">Комплексная диагностика</h3>
+              <h3 className="text-xl font-heading font-bold mb-3 text-foreground">Комплексная диагностика</h3>
               <p className="text-muted-foreground text-sm">
                 Находим истинную причину проблемы, а не только симптомы
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Icon name="Zap" className="text-accent" size={40} />
+            <div className="text-center p-6 rounded-2xl hover:bg-gradient-to-br hover:from-primary/5 hover:to-accent/5 transition-all duration-300">
+              <div className="w-24 h-24 bg-gradient-to-br from-accent/20 to-accent/10 rounded-3xl flex items-center justify-center mx-auto mb-6">
+                <Icon name="Zap" className="text-accent" size={44} />
               </div>
-              <h3 className="text-xl font-heading font-semibold mb-2">Эффективные техники</h3>
+              <h3 className="text-xl font-heading font-bold mb-3 text-foreground">Эффективные техники</h3>
               <p className="text-muted-foreground text-sm">
                 Применяем проверенные мягкие методы мануальной терапии
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Icon name="Video" className="text-accent" size={40} />
+            <div className="text-center p-6 rounded-2xl hover:bg-gradient-to-br hover:from-primary/5 hover:to-accent/5 transition-all duration-300">
+              <div className="w-24 h-24 bg-gradient-to-br from-accent/20 to-accent/10 rounded-3xl flex items-center justify-center mx-auto mb-6">
+                <Icon name="Video" className="text-accent" size={44} />
               </div>
-              <h3 className="text-xl font-heading font-semibold mb-2">Онлайн-консультации</h3>
+              <h3 className="text-xl font-heading font-bold mb-3 text-foreground">Онлайн-консультации</h3>
               <p className="text-muted-foreground text-sm">
                 Удобный формат для первичной консультации и рекомендаций
               </p>
             </div>
           </div>
-          <div className="text-center mt-12">
-            <Button onClick={scrollToForm} size="lg" className="bg-accent hover:bg-accent/90">
+          <div className="text-center mt-16">
+            <Button onClick={scrollToForm} size="lg" className="bg-gradient-to-r from-accent to-orange-500 hover:shadow-2xl transition-all duration-300 text-lg px-10 py-7 font-semibold">
               Записаться на консультацию
             </Button>
           </div>
         </div>
       </section>
 
-      <section id="reviews" className="py-20 bg-secondary/30">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-heading font-bold text-center text-primary mb-12">Отзывы пациентов</h2>
+      <section id="reviews" className="py-24 bg-gradient-to-b from-blue-50 to-white relative">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-sm mb-4">
+              💙 Отзывы
+            </div>
+            <h2 className="text-5xl font-heading font-extrabold mb-4">
+              <span className="text-gradient">Мнения пациентов</span>
+            </h2>
+          </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card>
-              <CardContent className="pt-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                    <Icon name="User" className="text-primary" size={24} />
+            <Card className="premium-card hover:-translate-y-1 transition-all duration-300">
+              <CardContent className="pt-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center shadow-lg">
+                    <Icon name="User" className="text-white" size={28} />
                   </div>
                   <div>
-                    <div className="font-semibold">Анна К.</div>
+                    <div className="font-bold text-lg">Анна К.</div>
                     <div className="text-sm text-muted-foreground">Офисный сотрудник</div>
                   </div>
                 </div>
-                <div className="flex mb-3">
+                <div className="flex mb-4">
                   {[1,2,3,4,5].map(i => (
-                    <Icon key={i} name="Star" className="text-yellow-400 fill-yellow-400" size={16} />
+                    <Icon key={i} name="Star" className="text-amber-400 fill-amber-400" size={20} />
                   ))}
                 </div>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-base leading-relaxed">
                   Обратилась с болями в шее после работы за компьютером. После трёх сеансов боль полностью ушла. 
                   Сергей Иванович — настоящий профессионал!
                 </p>
               </CardContent>
             </Card>
 
-            <Card>
-              <CardContent className="pt-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                    <Icon name="User" className="text-primary" size={24} />
+            <Card className="premium-card hover:-translate-y-1 transition-all duration-300">
+              <CardContent className="pt-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center shadow-lg">
+                    <Icon name="User" className="text-white" size={28} />
                   </div>
                   <div>
-                    <div className="font-semibold">Дмитрий М.</div>
+                    <div className="font-bold text-lg">Дмитрий М.</div>
                     <div className="text-sm text-muted-foreground">Спортсмен</div>
                   </div>
                 </div>
-                <div className="flex mb-3">
+                <div className="flex mb-4">
                   {[1,2,3,4,5].map(i => (
-                    <Icon key={i} name="Star" className="text-yellow-400 fill-yellow-400" size={16} />
+                    <Icon key={i} name="Star" className="text-amber-400 fill-amber-400" size={20} />
                   ))}
                 </div>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-base leading-relaxed">
                   Занимаюсь кроссфитом, постоянно были проблемы со спиной. После курса остеопатии восстановился 
                   быстрее обычного и улучшил результаты.
                 </p>
               </CardContent>
             </Card>
 
-            <Card>
-              <CardContent className="pt-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                    <Icon name="User" className="text-primary" size={24} />
+            <Card className="premium-card hover:-translate-y-1 transition-all duration-300">
+              <CardContent className="pt-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center shadow-lg">
+                    <Icon name="User" className="text-white" size={28} />
                   </div>
                   <div>
-                    <div className="font-semibold">Елена С.</div>
+                    <div className="font-bold text-lg">Елена С.</div>
                     <div className="text-sm text-muted-foreground">Беременная</div>
                   </div>
                 </div>
-                <div className="flex mb-3">
+                <div className="flex mb-4">
                   {[1,2,3,4,5].map(i => (
-                    <Icon key={i} name="Star" className="text-yellow-400 fill-yellow-400" size={16} />
+                    <Icon key={i} name="Star" className="text-amber-400 fill-amber-400" size={20} />
                   ))}
                 </div>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-base leading-relaxed">
                   Во время беременности появились боли в пояснице. Сергей помог безопасными методами, 
                   самочувствие значительно улучшилось. Рекомендую!
                 </p>
@@ -319,39 +351,53 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
+      <section className="py-24 bg-gradient-to-br from-orange-50 to-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent"></div>
+        <div className="container mx-auto px-6 relative">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-4xl font-heading font-bold text-primary mb-4">Онлайн-курсы и Док диалог</h2>
-                <p className="text-muted-foreground mb-6 text-lg">
+                <div className="inline-block px-4 py-2 bg-accent/10 rounded-full text-accent font-semibold text-sm mb-4">
+                  🎓 Образование
+                </div>
+                <h2 className="text-5xl font-heading font-extrabold mb-6">
+                  <span className="text-gradient">Онлайн-курсы</span><br/>
+                  <span className="text-foreground">Док диалог</span>
+                </h2>
+                <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
                   Экосистема для специалистов в области остеопатии, мануальной терапии и реабилитации. 
                   Обучающие курсы, инструменты для работы и профессиональное сообщество.
                 </p>
-                <ul className="space-y-3 mb-6">
+                <ul className="space-y-4 mb-8">
                   <li className="flex items-start gap-3">
-                    <Icon name="CheckCircle" className="text-primary mt-1" size={20} />
-                    <span>Профессиональные обучающие курсы</span>
+                    <div className="w-6 h-6 bg-primary rounded-lg flex items-center justify-center mt-1">
+                      <Icon name="CheckCircle" className="text-white" size={16} />
+                    </div>
+                    <span className="text-lg">Профессиональные обучающие курсы</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Icon name="CheckCircle" className="text-primary mt-1" size={20} />
-                    <span>Инструменты для специалистов</span>
+                    <div className="w-6 h-6 bg-primary rounded-lg flex items-center justify-center mt-1">
+                      <Icon name="CheckCircle" className="text-white" size={16} />
+                    </div>
+                    <span className="text-lg">Инструменты для специалистов</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Icon name="CheckCircle" className="text-primary mt-1" size={20} />
-                    <span>Сообщество практиков</span>
+                    <div className="w-6 h-6 bg-primary rounded-lg flex items-center justify-center mt-1">
+                      <Icon name="CheckCircle" className="text-white" size={16} />
+                    </div>
+                    <span className="text-lg">Сообщество практиков</span>
                   </li>
                 </ul>
-                <Button className="bg-primary hover:bg-primary/90">
+                <Button className="bg-gradient-to-r from-primary to-accent hover:shadow-2xl transition-all duration-300 text-lg px-10 py-7 font-semibold">
                   Узнать больше о курсах
                 </Button>
               </div>
-              <div>
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-r from-accent to-orange-500 rounded-3xl blur-2xl opacity-20"></div>
                 <img 
                   src="https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/files/83e06056-2243-48bd-820e-a86a722b53a5.jpg" 
                   alt="Обучение остеопатии"
-                  className="rounded-2xl shadow-xl w-full"
+                  className="rounded-3xl shadow-2xl w-full relative premium-shadow"
                 />
               </div>
             </div>
@@ -359,14 +405,20 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="booking-form" className="py-20 bg-gradient-to-br from-primary to-primary/80 text-white">
-        <div className="container mx-auto px-4">
+      <section id="booking-form" className="py-24 bg-gradient-to-br from-primary via-primary to-accent text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(255,255,255,0.1),transparent)]"></div>
+        <div className="container mx-auto px-6 relative">
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-4xl font-heading font-bold text-center mb-4">Записаться на приём</h2>
-            <p className="text-center mb-8 text-white/90 text-lg">
-              Оставьте заявку, и мы свяжемся с вами для подбора удобного времени
-            </p>
-            <Card className="bg-white">
+            <div className="text-center mb-10">
+              <div className="inline-block px-4 py-2 bg-white/20 rounded-full text-white font-semibold text-sm mb-4">
+                📞 Запись
+              </div>
+              <h2 className="text-5xl md:text-6xl font-heading font-extrabold mb-4">Записаться на приём</h2>
+              <p className="text-center text-white/90 text-xl">
+                Оставьте заявку, и мы свяжемся с вами для подбора удобного времени
+              </p>
+            </div>
+            <Card className="premium-card">
               <CardContent className="pt-6">
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
@@ -397,17 +449,17 @@ const Index = () => {
                       rows={4}
                     />
                   </div>
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <Button type="submit" className="flex-1 bg-accent hover:bg-accent/90">
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Button type="submit" className="flex-1 bg-gradient-to-r from-accent to-orange-500 hover:shadow-2xl transition-all duration-300 text-lg py-7 font-semibold">
                       Записаться онлайн
                     </Button>
                     <Button 
                       type="button"
                       variant="outline"
                       onClick={() => window.open('https://wa.me/79000000000', '_blank')}
-                      className="flex-1"
+                      className="flex-1 border-2 hover:bg-primary/5 text-lg py-7 font-semibold"
                     >
-                      <Icon name="MessageCircle" size={20} className="mr-2" />
+                      <Icon name="MessageCircle" size={22} className="mr-2" />
                       Написать в WhatsApp
                     </Button>
                   </div>
@@ -418,13 +470,20 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-4xl font-heading font-bold text-center text-primary mb-12">Часто задаваемые вопросы</h2>
-            <Accordion type="single" collapsible className="space-y-4">
-              <AccordionItem value="item-1" className="border rounded-lg px-6">
-                <AccordionTrigger className="text-lg font-semibold hover:no-underline">
+      <section className="py-24 bg-white relative">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-sm mb-4">
+                ❓ FAQ
+              </div>
+              <h2 className="text-5xl font-heading font-extrabold mb-4">
+                <span className="text-gradient">Частые вопросы</span>
+              </h2>
+            </div>
+            <Accordion type="single" collapsible className="space-y-6">
+              <AccordionItem value="item-1" className="premium-card border-0">
+                <AccordionTrigger className="text-xl font-bold hover:no-underline hover:text-primary transition-colors">
                   Сколько длится сеанс остеопатии?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
@@ -433,8 +492,8 @@ const Index = () => {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-2" className="border rounded-lg px-6">
-                <AccordionTrigger className="text-lg font-semibold hover:no-underline">
+              <AccordionItem value="item-2" className="premium-card border-0">
+                <AccordionTrigger className="text-xl font-bold hover:no-underline hover:text-primary transition-colors">
                   Безопасно ли для беременных?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
@@ -443,8 +502,8 @@ const Index = () => {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-3" className="border rounded-lg px-6">
-                <AccordionTrigger className="text-lg font-semibold hover:no-underline">
+              <AccordionItem value="item-3" className="premium-card border-0">
+                <AccordionTrigger className="text-xl font-bold hover:no-underline hover:text-primary transition-colors">
                   Можно ли получить онлайн-консультацию?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
@@ -453,8 +512,8 @@ const Index = () => {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-4" className="border rounded-lg px-6">
-                <AccordionTrigger className="text-lg font-semibold hover:no-underline">
+              <AccordionItem value="item-4" className="premium-card border-0">
+                <AccordionTrigger className="text-xl font-bold hover:no-underline hover:text-primary transition-colors">
                   Как попасть на курсы «Док диалог»?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
@@ -463,8 +522,8 @@ const Index = () => {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-5" className="border rounded-lg px-6">
-                <AccordionTrigger className="text-lg font-semibold hover:no-underline">
+              <AccordionItem value="item-5" className="premium-card border-0"
+                <AccordionTrigger className="text-xl font-bold hover:no-underline hover:text-primary transition-colors">
                   Сколько сеансов потребуется?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
@@ -477,55 +536,61 @@ const Index = () => {
         </div>
       </section>
 
-      <footer id="contacts" className="bg-foreground text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8">
+      <footer id="contacts" className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(30,144,255,0.1),transparent)]"></div>
+        <div className="container mx-auto px-6 relative">
+          <div className="grid md:grid-cols-3 gap-12">
             <div>
-              <h3 className="text-2xl font-heading font-bold mb-4">OsteopatPlus</h3>
-              <p className="text-white/80 mb-4">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center shadow-lg">
+                  <Icon name="Activity" className="text-white" size={26} />
+                </div>
+                <h3 className="text-2xl font-heading font-extrabold">Остеопат<span className="text-accent">+</span></h3>
+              </div>
+              <p className="text-white/80 mb-6 text-lg">
                 Остеопатия с 17-летним опытом. Забота о вашем здоровье.
               </p>
-              <div className="flex gap-4">
-                <a href="#" className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors">
-                  <Icon name="Instagram" size={20} />
+              <div className="flex gap-3">
+                <a href="#" className="w-12 h-12 bg-white/10 hover:bg-gradient-to-br hover:from-primary hover:to-accent rounded-xl flex items-center justify-center transition-all duration-300">
+                  <Icon name="Instagram" size={22} />
                 </a>
-                <a href="#" className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors">
-                  <Icon name="Send" size={20} />
+                <a href="#" className="w-12 h-12 bg-white/10 hover:bg-gradient-to-br hover:from-primary hover:to-accent rounded-xl flex items-center justify-center transition-all duration-300">
+                  <Icon name="Send" size={22} />
                 </a>
               </div>
             </div>
 
             <div>
-              <h4 className="font-heading font-semibold text-lg mb-4">Контакты</h4>
-              <div className="space-y-3 text-white/80">
-                <div className="flex items-start gap-2">
-                  <Icon name="Phone" size={18} className="mt-1" />
+              <h4 className="font-heading font-bold text-xl mb-6">Контакты</h4>
+              <div className="space-y-4 text-white/80 text-lg">
+                <div className="flex items-start gap-3 hover:text-white transition-colors">
+                  <Icon name="Phone" size={22} className="mt-1" />
                   <span>+7 (900) 000-00-00</span>
                 </div>
-                <div className="flex items-start gap-2">
-                  <Icon name="Mail" size={18} className="mt-1" />
+                <div className="flex items-start gap-3 hover:text-white transition-colors">
+                  <Icon name="Mail" size={22} className="mt-1" />
                   <span>info@osteopatplus.ru</span>
                 </div>
-                <div className="flex items-start gap-2">
-                  <Icon name="MapPin" size={18} className="mt-1" />
+                <div className="flex items-start gap-3 hover:text-white transition-colors">
+                  <Icon name="MapPin" size={22} className="mt-1" />
                   <span>Москва, ул. Примерная, д. 123</span>
                 </div>
               </div>
             </div>
 
             <div>
-              <h4 className="font-heading font-semibold text-lg mb-4">Навигация</h4>
-              <nav className="space-y-2 text-white/80">
-                <a href="#about" className="block hover:text-white transition-colors">О специалисте</a>
-                <a href="#services" className="block hover:text-white transition-colors">Услуги</a>
-                <a href="#reviews" className="block hover:text-white transition-colors">Отзывы</a>
-                <a href="#booking-form" className="block hover:text-white transition-colors">Записаться</a>
+              <h4 className="font-heading font-bold text-xl mb-6">Навигация</h4>
+              <nav className="space-y-3 text-white/80 text-lg">
+                <a href="#about" className="block hover:text-white transition-colors hover:translate-x-1 duration-200">О специалисте</a>
+                <a href="#services" className="block hover:text-white transition-colors hover:translate-x-1 duration-200">Услуги</a>
+                <a href="#reviews" className="block hover:text-white transition-colors hover:translate-x-1 duration-200">Отзывы</a>
+                <a href="#booking-form" className="block hover:text-white transition-colors hover:translate-x-1 duration-200">Записаться</a>
               </nav>
             </div>
           </div>
 
-          <div className="border-t border-white/10 mt-8 pt-8 text-center text-white/60 text-sm">
-            <p>© 2024 OsteopatPlus. Все права защищены. | <a href="#" className="hover:text-white">Политика конфиденциальности</a></p>
+          <div className="border-t border-white/20 mt-12 pt-8 text-center text-white/70">
+            <p className="text-base">© 2024 Остеопат+. Все права защищены. | <a href="#" className="hover:text-white transition-colors">Политика конфиденциальности</a></p>
           </div>
         </div>
       </footer>

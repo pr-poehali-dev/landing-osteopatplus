@@ -111,3 +111,21 @@
     font-family: "Montserrat", sans-serif;
   }
 }
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  }
+
+  .glass {
+    @apply bg-white/80 backdrop-blur-xl border border-white/20 shadow-xl;
+  }
+
+  .premium-shadow {
+    box-shadow: 0 20px 60px rgba(30, 144, 255, 0.15);
+  }
+
+  .premium-card {
+    @apply bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 border border-gray-100;
+  }
+}
