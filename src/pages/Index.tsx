@@ -497,50 +497,50 @@ const Index = () => {
             </div>
             <Accordion type="single" collapsible className="space-y-6">
               <AccordionItem value="item-1" className="premium-card border-0">
-                <AccordionTrigger className="text-xl font-bold hover:no-underline hover:text-primary transition-colors">
+                <AccordionTrigger className="text-xl font-bold hover:no-underline hover:text-primary transition-colors text-left">
                   Сколько длится сеанс остеопатии?
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
+                <AccordionContent className="text-muted-foreground text-left">
                   Стандартный сеанс длится 60 минут. Первичная консультация может занять до 90 минут, 
                   так как включает детальную диагностику и сбор анамнеза.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-2" className="premium-card border-0">
-                <AccordionTrigger className="text-xl font-bold hover:no-underline hover:text-primary transition-colors">
+                <AccordionTrigger className="text-xl font-bold hover:no-underline hover:text-primary transition-colors text-left">
                   Безопасно ли для беременных?
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
+                <AccordionContent className="text-muted-foreground text-left">
                   Да, остеопатия абсолютно безопасна для беременных на любом сроке. Применяются специальные 
                   мягкие техники, которые помогают снять напряжение и подготовить тело к родам.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-3" className="premium-card border-0">
-                <AccordionTrigger className="text-xl font-bold hover:no-underline hover:text-primary transition-colors">
+                <AccordionTrigger className="text-xl font-bold hover:no-underline hover:text-primary transition-colors text-left">
                   Можно ли получить онлайн-консультацию?
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
+                <AccordionContent className="text-muted-foreground text-left">
                   Да, доступны онлайн-консультации для первичной диагностики, разбора проблемы и получения 
                   рекомендаций. Для практической работы необходим очный приём.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-4" className="premium-card border-0">
-                <AccordionTrigger className="text-xl font-bold hover:no-underline hover:text-primary transition-colors">
+                <AccordionTrigger className="text-xl font-bold hover:no-underline hover:text-primary transition-colors text-left">
                   Как попасть на курсы «Док диалог»?
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
+                <AccordionContent className="text-muted-foreground text-left">
                   Курсы доступны для специалистов в области остеопатии и мануальной терапии. 
                   Свяжитесь с нами через форму записи или WhatsApp для получения подробной информации о программах обучения.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-5" className="premium-card border-0">
-                <AccordionTrigger className="text-xl font-bold hover:no-underline hover:text-primary transition-colors">
+                <AccordionTrigger className="text-xl font-bold hover:no-underline hover:text-primary transition-colors text-left">
                   Сколько сеансов потребуется?
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
+                <AccordionContent className="text-muted-foreground text-left">
                   Количество сеансов индивидуально и зависит от задач. В среднем курс составляет 3-5 сеансов. 
                   После первой консультации составляется персональный план работы.
                 </AccordionContent>
