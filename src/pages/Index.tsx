@@ -49,8 +49,8 @@ const Index = () => {
       <section className="pt-36 pb-24 relative overflow-hidden min-h-screen flex items-center">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/files/7b36ae29-bc2c-4161-aaa0-9f84036d4d20.jpg" 
-            alt="Остеопатия"
+            src="https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/bucket/2291e50a-e4f9-49ca-908b-8a23aef3bb4f.png" 
+            alt="Остеопат Сергей"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-transparent"></div>
