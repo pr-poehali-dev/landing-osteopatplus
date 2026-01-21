@@ -30,7 +30,7 @@ const Index = () => {
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
               <Icon name="Activity" className="text-white" size={24} />
             </div>
-            <h1 className="text-2xl font-heading font-bold text-primary">OsteopatPlus</h1>
+            <h1 className="text-2xl font-heading font-bold text-primary">Остеопат<span className="text-accent">+</span></h1>
           </div>
           <nav className="hidden md:flex gap-6">
             <a href="#about" className="text-foreground hover:text-primary transition-colors">О специалисте</a>
