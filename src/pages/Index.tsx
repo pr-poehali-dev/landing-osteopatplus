@@ -53,7 +53,7 @@ const Index = () => {
             alt="Остеопат Сергей"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/60 to-white/20"></div>
         </div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-2xl">
