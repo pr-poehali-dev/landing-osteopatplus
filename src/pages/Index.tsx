@@ -107,7 +107,7 @@ const Index = () => {
               </h2>
               <div className="space-y-4 text-lg text-muted-foreground">
                 <p>
-                  <strong className="text-foreground">Сергей Иванович</strong> — врач-остеопат с 17-летним опытом работы. 
+                  <strong className="text-foreground">Сергей Водопьянов</strong> — врач-остеопат с 17-летним опытом работы. 
                   Член Российской остеопатической ассоциации.
                 </p>
                 <p>
