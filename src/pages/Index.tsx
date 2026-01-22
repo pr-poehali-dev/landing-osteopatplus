@@ -4,18 +4,68 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Checkbox } from "@/components/ui/checkbox";
+import { useToast } from "@/components/ui/use-toast";
 import Icon from '@/components/ui/icon';
 
 const Index = () => {
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
     comment: ''
   });
+  const [agreedToPolicy, setAgreedToPolicy] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    
+    if (!agreedToPolicy) {
+      toast({
+        title: 'Требуется согласие',
+        description: 'Пожалуйста, примите политику конфиденциальности',
+        variant: 'destructive'
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('https://functions.poehali.dev/955b4e10-ed02-4e78-8fb5-77bffbe148cb', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        toast({
+          title: 'Заявка отправлена!',
+          description: 'Мы свяжемся с вами в ближайшее время',
+        });
+        setFormData({ name: '', phone: '', comment: '' });
+        setAgreedToPolicy(false);
+      } else {
+        toast({
+          title: 'Ошибка',
+          description: data.error || 'Не удалось отправить заявку',
+          variant: 'destructive'
+        });
+      }
+    } catch (error) {
+      toast({
+        title: 'Ошибка',
+        description: 'Проблема с подключением. Попробуйте позже.',
+        variant: 'destructive'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const scrollToForm = () => {
@@ -494,9 +544,27 @@ const Index = () => {
                       rows={4}
                     />
                   </div>
+                  <div className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg">
+                    <Checkbox 
+                      id="policy"
+                      checked={agreedToPolicy}
+                      onCheckedChange={(checked) => setAgreedToPolicy(checked as boolean)}
+                      className="mt-1"
+                    />
+                    <label htmlFor="policy" className="text-sm text-foreground leading-relaxed cursor-pointer">
+                      Я согласен с{' '}
+                      <a href="/politics" target="_blank" className="text-primary hover:text-accent underline font-medium">
+                        политикой конфиденциальности
+                      </a>
+                    </label>
+                  </div>
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button type="submit" className="flex-1 bg-accent hover:bg-accent/90 transition-all duration-300 text-lg py-7 font-semibold">
-                      Записаться онлайн
+                    <Button 
+                      type="submit" 
+                      disabled={isSubmitting || !agreedToPolicy}
+                      className="flex-1 bg-accent hover:bg-accent/90 transition-all duration-300 text-lg py-7 font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      {isSubmitting ? 'Отправка...' : 'Записаться онлайн'}
                     </Button>
                     <Button 
                       type="button"
