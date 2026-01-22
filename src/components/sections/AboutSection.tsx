@@ -29,7 +29,7 @@ const AboutSection = ({ onBookingClick }: AboutSectionProps) => {
               <div className="space-y-3 sm:space-y-4 text-base sm:text-lg text-muted-foreground">
                 <p>
                   <strong className="text-foreground">Сергей Водопьянов</strong> — остеопат с 17-летним опытом работы. 
-                  <a href="https://assotsiatsiya-osteopatov.ru/user/svodopianoff/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-accent underline transition-colors">
+                  <a href="https://assotsiatsiya-osteopatov.ru/user/svodopianoff/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-accent transition-colors">
                     Член Российской остеопатической ассоциации
                   </a>.
                 </p>
