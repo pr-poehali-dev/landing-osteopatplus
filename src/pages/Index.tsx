@@ -367,6 +367,17 @@ const Index = () => {
               </CardContent>
             </Card>
           </div>
+          <div className="text-center mt-12">
+            <a 
+              href="https://yandex.ru/maps/org/osteopat_plyus/99582120415/reviews/?indoorLevel=1&ll=37.599911%2C55.781054&utm_campaign=v1&utm_medium=rating&utm_source=badge&z=17"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-primary hover:text-accent transition-colors duration-300 text-lg font-semibold group"
+            >
+              Читать все отзывы
+              <Icon name="ArrowRight" className="group-hover:translate-x-1 transition-transform duration-300" size={20} />
+            </a>
+          </div>
         </div>
       </section>
 
