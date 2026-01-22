@@ -558,24 +558,13 @@ const Index = () => {
                       </a>
                     </label>
                   </div>
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <Button 
-                      type="submit" 
-                      disabled={isSubmitting || !agreedToPolicy}
-                      className="flex-1 bg-accent hover:bg-accent/90 transition-all duration-300 text-lg py-7 font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      {isSubmitting ? 'Отправка...' : 'Записаться онлайн'}
-                    </Button>
-                    <Button 
-                      type="button"
-                      variant="outline"
-                      onClick={() => window.open('https://wa.me/79000000000', '_blank')}
-                      className="flex-1 border-2 hover:bg-primary/5 text-lg py-7 font-semibold"
-                    >
-                      <Icon name="MessageCircle" size={22} className="mr-2" />
-                      Написать в WhatsApp
-                    </Button>
-                  </div>
+                  <Button 
+                    type="submit" 
+                    disabled={isSubmitting || !agreedToPolicy}
+                    className="w-full bg-accent hover:bg-accent/90 transition-all duration-300 text-lg py-7 font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {isSubmitting ? 'Отправка...' : 'Записаться онлайн'}
+                  </Button>
                 </form>
               </CardContent>
             </Card>
