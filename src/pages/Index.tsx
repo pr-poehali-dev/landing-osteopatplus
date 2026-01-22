@@ -322,12 +322,14 @@ const Index = () => {
             <Card className="premium-card hover:-translate-y-1 transition-all duration-300">
               <CardContent className="pt-8">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center shadow-md">
-                    <Icon name="User" className="text-white" size={28} />
-                  </div>
+                  <img 
+                    src="https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/bucket/9761f5f9-e3a7-422f-bee1-983732a5b5bf.jpg"
+                    alt="Игорь"
+                    className="w-16 h-16 rounded-2xl object-cover shadow-md"
+                  />
                   <div>
-                    <div className="font-bold text-lg">Дмитрий М.</div>
-                    <div className="text-sm text-muted-foreground">Спортсмен</div>
+                    <div className="font-bold text-lg">Игорь</div>
+                    <div className="text-sm text-muted-foreground">Стилист</div>
                   </div>
                 </div>
                 <div className="flex mb-4">
@@ -336,8 +338,7 @@ const Index = () => {
                   ))}
                 </div>
                 <p className="text-muted-foreground text-base leading-relaxed">
-                  Занимаюсь кроссфитом, постоянно были проблемы со спиной. После курса сеансов восстановился 
-                  быстрее обычного и улучшил результаты.
+                  Лучший специалист, отнималась рука, уже обошел пол Москвы, и отчаялся. Но тут чудо — после первой процедуры почувствовал себя как новый! Рекомендую от души
                 </p>
               </CardContent>
             </Card>
