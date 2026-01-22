@@ -420,7 +420,10 @@ const ReviewsSection = () => {
                   <Icon name="Mail" size={18} className="mt-0.5 sm:mt-1 flex-shrink-0" />
                   <a href="mailto:svodopianoff@yandex.ru" className="break-all">svodopianoff@yandex.ru</a>
                 </div>
-                <div className="flex items-start gap-2 sm:gap-3 hover:text-white transition-colors">
+                <div 
+                  className="flex items-start gap-2 sm:gap-3 hover:text-white transition-colors cursor-pointer"
+                  onClick={() => window.open('https://yandex.ru/maps/?text=Москва, ул. Новослободская, д. 14/19 стр. 1', '_blank')}
+                >
                   <Icon name="MapPin" size={18} className="mt-0.5 sm:mt-1 flex-shrink-0" />
                   <span>Москва, ул. Новослободская, д. 14/19 стр. 1</span>
                 </div>
