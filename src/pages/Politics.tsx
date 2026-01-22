@@ -3,13 +3,19 @@ const Politics = () => {
     <div className="min-h-screen bg-gray-50">
       <header className="fixed top-0 left-0 right-0 glass z-50">
         <div className="container mx-auto px-6 py-5 flex justify-between items-center">
-          <a href="/" className="flex items-center gap-3">
+          <a href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
             <svg className="w-12 h-12" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M24 4 C14 4 8 10 8 18 C8 24 12 28 16 32 L18 34 C20 36 22 38 24 40 C26 38 28 36 30 34 L32 32 C36 28 40 24 40 18 C40 10 34 4 24 4 Z" className="fill-primary"/>
               <circle cx="24" cy="18" r="4" fill="white"/>
               <path d="M18 18 L24 24 L30 18" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
             <h1 className="text-2xl font-heading font-extrabold text-primary">Остеопат<span className="text-accent">+</span></h1>
+          </a>
+          <a 
+            href="/"
+            className="bg-accent hover:bg-accent/90 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+          >
+            На главную
           </a>
         </div>
       </header>
