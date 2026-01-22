@@ -246,7 +246,7 @@ const Index = () => {
             <Card className="premium-card hover:-translate-y-2 transition-all duration-300 group">
               <div className="relative h-64 overflow-hidden rounded-3xl m-6 mb-0">
                 <img 
-                  src="https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/files/c4ea56d0-dbb0-4e8f-9092-0b5fb2be92b1.jpg"
+                  src="https://cdn.poehali.dev/files/be28ce3c-c64d-42f7-ad90-5d3aa63890f1.jpg"
                   alt="Беременные"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded-3xl border-4 border-white shadow-xl"
                 />
