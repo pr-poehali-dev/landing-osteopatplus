@@ -314,7 +314,7 @@ const Index = () => {
                   </div>
                   <div className="h-12 w-px bg-gray-200"></div>
                   <div className="text-left">
-                    <div className="text-2xl font-bold text-foreground">50+</div>
+                    <div className="text-2xl font-bold text-foreground">35+</div>
                     <div className="text-sm text-muted-foreground">отзывов</div>
                   </div>
                 </div>
