@@ -58,8 +58,7 @@ const Index = () => {
                 ✨ 17 лет опыта
               </div>
               <h1 className="text-5xl md:text-7xl font-heading font-extrabold mb-6 leading-[1.1] text-foreground">
-                Остеопатия<br/>
-                <span className="text-primary bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">для вашего здоровья</span>
+                <span className="text-primary bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">Для вашего здоровья</span>
               </h1>
               <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
                 Индивидуальный подход к офисным сотрудникам, спортсменам и беременным. 
