@@ -611,15 +611,15 @@ const Index = () => {
               <div className="space-y-4 text-white/80 text-lg">
                 <div className="flex items-start gap-3 hover:text-white transition-colors">
                   <Icon name="Phone" size={22} className="mt-1" />
-                  <span>+7 (900) 000-00-00</span>
+                  <a href="tel:+79029007474">+7 (902) 900-74-74</a>
                 </div>
                 <div className="flex items-start gap-3 hover:text-white transition-colors">
                   <Icon name="Mail" size={22} className="mt-1" />
-                  <span>info@osteopatplus.ru</span>
+                  <a href="mailto:svodopianoff@yandex.ru">svodopianoff@yandex.ru</a>
                 </div>
                 <div className="flex items-start gap-3 hover:text-white transition-colors">
                   <Icon name="MapPin" size={22} className="mt-1" />
-                  <span>Москва, ул. Примерная, д. 123</span>
+                  <span>Москва, ул. Новослободская, д. 14/19 стр. 1</span>
                 </div>
               </div>
             </div>
