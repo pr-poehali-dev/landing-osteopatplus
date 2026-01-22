@@ -347,7 +347,7 @@ const Index = () => {
               <CardContent className="pt-8">
                 <div className="flex items-center gap-4 mb-6">
                   <img 
-                    src="https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/bucket/35f23a33-cc9f-4e6d-983a-e1e9851c4c88.jpg"
+                    src="https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/bucket/003958fd-5fbc-4812-8876-0d63c529c5b8.jpg"
                     alt="Yulia Lukyanenko"
                     className="w-16 h-16 rounded-2xl object-cover shadow-md"
                   />
