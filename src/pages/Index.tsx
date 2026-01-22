@@ -302,7 +302,7 @@ const Index = () => {
               >
                 <div className="premium-card inline-flex items-center gap-4 hover:shadow-xl transition-all duration-300">
                   <div className="flex items-center gap-2">
-                    <span className="text-4xl font-bold text-primary">4.9</span>
+                    <span className="text-4xl font-bold text-primary">5.0</span>
                     <div className="flex flex-col">
                       <div className="flex">
                         {[1,2,3,4,5].map(i => (
