@@ -293,6 +293,33 @@ const Index = () => {
             <h2 className="text-5xl font-heading font-extrabold mb-4 text-primary">
               Отзывы клиентов
             </h2>
+            <div className="flex justify-center mt-8">
+              <a 
+                href="https://yandex.ru/maps/org/osteopat_plyus/99582120415/?indoorLevel=1&ll=37.599911%2C55.781054&utm_campaign=v1&utm_medium=rating&utm_source=badge&z=17" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
+                <div className="premium-card inline-flex items-center gap-4 hover:shadow-xl transition-all duration-300">
+                  <div className="flex items-center gap-2">
+                    <span className="text-4xl font-bold text-primary">4.9</span>
+                    <div className="flex flex-col">
+                      <div className="flex">
+                        {[1,2,3,4,5].map(i => (
+                          <Icon key={i} name="Star" className="text-amber-400 fill-amber-400" size={18} />
+                        ))}
+                      </div>
+                      <span className="text-sm text-muted-foreground mt-1">Яндекс.Карты</span>
+                    </div>
+                  </div>
+                  <div className="h-12 w-px bg-gray-200"></div>
+                  <div className="text-left">
+                    <div className="text-2xl font-bold text-foreground">50+</div>
+                    <div className="text-sm text-muted-foreground">отзывов</div>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="premium-card hover:-translate-y-1 transition-all duration-300">
