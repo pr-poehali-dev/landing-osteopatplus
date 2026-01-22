@@ -345,12 +345,14 @@ const Index = () => {
             <Card className="premium-card hover:-translate-y-1 transition-all duration-300">
               <CardContent className="pt-8">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center shadow-md">
-                    <Icon name="User" className="text-white" size={28} />
-                  </div>
+                  <img 
+                    src="https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/bucket/35f23a33-cc9f-4e6d-983a-e1e9851c4c88.jpg"
+                    alt="Yulia Lukyanenko"
+                    className="w-16 h-16 rounded-2xl object-cover shadow-md"
+                  />
                   <div>
-                    <div className="font-bold text-lg">Елена С.</div>
-                    <div className="text-sm text-muted-foreground">Беременная</div>
+                    <div className="font-bold text-lg">Yulia Lukyanenko</div>
+                    <div className="text-sm text-muted-foreground">Маркетолог</div>
                   </div>
                 </div>
                 <div className="flex mb-4">
@@ -359,8 +361,7 @@ const Index = () => {
                   ))}
                 </div>
                 <p className="text-muted-foreground text-base leading-relaxed">
-                  Во время беременности появились боли в пояснице. Сергей Иванович помог безопасными методами, 
-                  самочувствие значительно улучшилось. Рекомендую!
+                  Была не раз у Сергея, и даже беременную меня он спасал от болей и спазмов! Очень рекомендую его как специалиста своего дела. Сергей ставит на ноги прям 👍🏼
                 </p>
               </CardContent>
             </Card>
