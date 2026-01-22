@@ -212,7 +212,7 @@ const Index = () => {
             <Card className="premium-card hover:-translate-y-2 transition-all duration-300 group">
               <div className="relative h-64 overflow-hidden rounded-3xl m-6 mb-0">
                 <img 
-                  src="https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/files/63634725-2e4d-4e0b-80e6-28821e8c2c1c.jpg"
+                  src="https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/bucket/fa75eb48-65ff-4eee-a704-9786481f6155.jpg"
                   alt="Офисные сотрудники"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded-3xl border-4 border-white shadow-xl"
                 />
