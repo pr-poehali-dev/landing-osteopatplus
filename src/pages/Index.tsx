@@ -298,12 +298,14 @@ const Index = () => {
             <Card className="premium-card hover:-translate-y-1 transition-all duration-300">
               <CardContent className="pt-8">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center shadow-md">
-                    <Icon name="User" className="text-white" size={28} />
-                  </div>
+                  <img 
+                    src="https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/bucket/01432468-6f5d-4d2e-b058-0d32fc2ff86a.jpg"
+                    alt="Юля Р."
+                    className="w-16 h-16 rounded-2xl object-cover shadow-md"
+                  />
                   <div>
-                    <div className="font-bold text-lg">Анна К.</div>
-                    <div className="text-sm text-muted-foreground">Офисный сотрудник</div>
+                    <div className="font-bold text-lg">Юля Р.</div>
+                    <div className="text-sm text-muted-foreground">Стилист</div>
                   </div>
                 </div>
                 <div className="flex mb-4">
@@ -312,8 +314,7 @@ const Index = () => {
                   ))}
                 </div>
                 <p className="text-muted-foreground text-base leading-relaxed">
-                  Обратилась с болями в шее после работы за компьютером. После трёх сеансов состояние значительно улучшилось. 
-                  Сергей Иванович — настоящий профессионал!
+                  Сергей, благодарю вас 🙏 долгое время мучали боли, никто не мог найти решение. И только вы смогли вернуть к жизни без боли. Золотые руки ❣️
                 </p>
               </CardContent>
             </Card>
