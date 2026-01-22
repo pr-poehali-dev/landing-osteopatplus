@@ -19,7 +19,7 @@ const Index = () => {
   };
 
   const scrollToForm = () => {
-    document.getElementById('booking-form')?.scrollIntoView({ behavior: 'smooth' });
+    window.open('https://t.me/SergeuVodopianov', '_blank');
   };
 
   return (
@@ -67,15 +67,6 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button onClick={scrollToForm} size="lg" className="bg-accent hover:bg-accent/90 transition-all duration-300 text-lg px-10 py-7 font-semibold shadow-lg hover:shadow-xl hover:scale-105">
                   Записаться на консультацию
-                </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  onClick={() => window.open('https://wa.me/79000000000', '_blank')}
-                  className="text-lg px-10 py-7 font-semibold border-2 hover:bg-primary/5 bg-white shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
-                >
-                  <Icon name="MessageCircle" size={22} className="mr-2" />
-                  WhatsApp
                 </Button>
               </div>
             </div>
