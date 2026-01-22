@@ -636,7 +636,7 @@ const Index = () => {
           </div>
 
           <div className="border-t border-white/20 mt-12 pt-8 text-center text-white/70">
-            <p className="text-base">© 2024 Остеопат+. Все права защищены. | <a href="#" className="hover:text-white transition-colors">Политика конфиденциальности</a></p>
+            <p className="text-base">© 2024 Остеопат+. Все права защищены. | <a href="/politics" className="hover:text-white transition-colors">Политика конфиденциальности</a></p>
           </div>
         </div>
       </footer>
