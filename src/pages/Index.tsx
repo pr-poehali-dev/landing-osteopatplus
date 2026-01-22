@@ -597,10 +597,7 @@ const Index = () => {
                 Остеопатия с 17-летним опытом. Забота о вашем здоровье.
               </p>
               <div className="flex gap-3">
-                <a href="#" className="w-12 h-12 bg-white/10 hover:bg-accent rounded-xl flex items-center justify-center transition-all duration-300">
-                  <Icon name="Instagram" size={22} />
-                </a>
-                <a href="#" className="w-12 h-12 bg-white/10 hover:bg-accent rounded-xl flex items-center justify-center transition-all duration-300">
+                <a href="https://t.me/osteomanual" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/10 hover:bg-accent rounded-xl flex items-center justify-center transition-all duration-300">
                   <Icon name="Send" size={22} />
                 </a>
               </div>
