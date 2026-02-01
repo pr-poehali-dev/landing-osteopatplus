@@ -30,7 +30,10 @@ export default function CookieConsent() {
           <div className="flex-1">
             <p className="text-sm text-gray-700">
               Мы используем cookie для улучшения работы сайта и анализа посещаемости. 
-              Продолжая использовать сайт, вы соглашаетесь с использованием cookie.
+              Продолжая использовать сайт, вы соглашаетесь с использованием cookie.{' '}
+              <a href="/politics" className="text-primary hover:underline">
+                Политика конфиденциальности
+              </a>
             </p>
           </div>
           <div className="flex items-center gap-3 w-full sm:w-auto">
