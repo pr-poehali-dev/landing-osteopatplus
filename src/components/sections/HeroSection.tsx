@@ -29,6 +29,34 @@ const HeroSection = ({ onBookingClick }: HeroSectionProps) => {
                 Записаться на консультацию
               </Button>
             </div>
+            <div className="mt-4">
+              <a href="https://preview--masso-website-development.poehali.dev/catalog/1" target="_blank" rel="noopener"
+                style={{display:"inline-flex",flexDirection:"column",textDecoration:"none",
+                        fontFamily:"system-ui,sans-serif",maxWidth:"300px",width:"100%",
+                        background:"linear-gradient(160deg,#f8fafc 0%,#f0f7ff 100%)",
+                        border:"1px solid #e2eaf5",borderRadius:"20px",
+                        boxShadow:"0 8px 32px rgba(13,162,231,0.10),0 1px 4px rgba(0,0,0,0.06)",
+                        overflow:"hidden"}}>
+                <div style={{display:"flex",flexDirection:"column",gap:"12px",padding:"16px"}}>
+                  <div style={{display:"flex",alignItems:"center",gap:"12px"}}>
+                    <img src="https://cdn.poehali.dev/projects/08a371f8-54a3-463b-ba90-37bf9bcbd421/bucket/59ee2a21-9d72-4798-89a9-280f70bcac0b.png"
+                         alt="МассоПРО" style={{width:"44px",height:"44px",objectFit:"contain",flexShrink:0}} />
+                    <div style={{minWidth:0,flex:1}}>
+                      <p style={{margin:0,fontSize:"13px",fontWeight:700,color:"#0f172a",letterSpacing:"-0.01em",whiteSpace:"nowrap",overflow:"hidden",textOverflow:"ellipsis"}}>Остеопат +</p>
+                    </div>
+                  </div>
+                  <div style={{height:"1px",background:"linear-gradient(90deg,#e2eaf5,transparent)"}}></div>
+                  <div style={{display:"flex",alignItems:"center",gap:"6px"}}>
+                    <span style={{fontSize:"15px",letterSpacing:"1px",color:"#f59e0b"}}>★★★★★</span>
+                    <span style={{fontSize:"15px",fontWeight:800,color:"#0f172a"}}>5.0</span>
+                    <span style={{fontSize:"11px",color:"#94a3b8"}}>/5</span>
+                  </div>
+                  <div style={{display:"flex",alignItems:"center",gap:"8px",background:"rgba(13,162,231,0.06)",borderRadius:"10px",padding:"6px 10px"}}>
+                    <span style={{fontSize:"11px",fontWeight:600,color:"#0da2e7",letterSpacing:"0.01em"}}>Сертифицировано МассоПРО</span>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
           <div className="animate-scale-in relative mt-8 md:mt-0">
             <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl sm:rounded-3xl blur-2xl"></div>
