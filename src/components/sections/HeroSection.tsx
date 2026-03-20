@@ -30,7 +30,7 @@ const HeroSection = ({ onBookingClick }: HeroSectionProps) => {
               </Button>
             </div>
             <div className="mt-4">
-              <a href="https://preview--masso-website-development.poehali.dev/catalog/1" target="_blank" rel="noopener"
+              <a href="https://massopro.ru/catalog/1" target="_blank" rel="noopener"
                 style={{display:"inline-flex",flexDirection:"column",textDecoration:"none",
                         fontFamily:"system-ui,sans-serif",maxWidth:"300px",width:"100%",
                         background:"linear-gradient(160deg,#f8fafc 0%,#f0f7ff 100%)",
