@@ -81,7 +81,7 @@ const ReviewsSection = () => {
             </h2>
             <div className="flex justify-center mt-6 sm:mt-8">
               <a 
-                href="https://yandex.ru/maps/org/osteopat_plyus/99582120415/?indoorLevel=1&ll=37.599911%2C55.781054&utm_campaign=v1&utm_medium=rating&utm_source=badge&z=17" 
+                href="https://yandex.com/maps/-/CPfQbFMs" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block"
