@@ -231,7 +231,7 @@ const ReviewsSection = () => {
                   </li>
                 </ul>
                 <Button 
-                  onClick={() => window.open('https://docdialog.su/courses', '_blank')}
+                  onClick={() => window.open('https://docdialog.ru/catalog/private', '_blank')}
                   className="bg-primary hover:bg-primary/90 transition-all duration-300 text-base sm:text-lg px-6 sm:px-10 py-5 sm:py-7 font-semibold w-full sm:w-auto"
                 >
                   Узнать больше о курсах
