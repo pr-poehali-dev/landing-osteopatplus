@@ -230,12 +230,14 @@ const ReviewsSection = () => {
                     <span className="text-sm sm:text-lg">Сообщество практиков</span>
                   </li>
                 </ul>
-                <Button 
-                  onClick={() => window.open('https://docdialog.ru/catalog/private', '_blank')}
-                  className="bg-primary hover:bg-primary/90 transition-all duration-300 text-base sm:text-lg px-6 sm:px-10 py-5 sm:py-7 font-semibold w-full sm:w-auto"
+                <a
+                  href="https://docdialog.ru/catalog/private"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 transition-all duration-300 text-base sm:text-lg px-6 sm:px-10 py-5 sm:py-7 font-semibold w-full sm:w-auto rounded-md text-primary-foreground"
                 >
                   Узнать больше о курсах
-                </Button>
+                </a>
               </div>
               <div className="relative mt-8 md:mt-0">
                 <img 
