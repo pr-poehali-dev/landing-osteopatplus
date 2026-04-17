@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const HERO_IMAGE =
   "https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/files/19c15364-5cdd-43bd-944e-558cd745cf69.jpg";
 
@@ -38,30 +40,47 @@ export default function PremiumHero({ onScrollToContact }: PremiumHeroProps) {
             Private Practice
           </span>
         </div>
-        <button
-          onClick={onScrollToContact}
-          style={{
-            fontSize: "12px",
-            letterSpacing: "0.08em",
-            background: "none",
-            border: "1px solid #2C2C2C",
-            padding: "9px 18px",
-            cursor: "pointer",
-            color: "#2C2C2C",
-            transition: "all 0.3s ease",
-            whiteSpace: "nowrap",
-          }}
-          onMouseEnter={e => {
-            (e.currentTarget as HTMLButtonElement).style.background = "#2C2C2C";
-            (e.currentTarget as HTMLButtonElement).style.color = "#FAF9F7";
-          }}
-          onMouseLeave={e => {
-            (e.currentTarget as HTMLButtonElement).style.background = "none";
-            (e.currentTarget as HTMLButtonElement).style.color = "#2C2C2C";
-          }}
-        >
-          Обсудить запрос
-        </button>
+        <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+          <Link
+            to="/observations"
+            style={{
+              fontSize: "12px",
+              letterSpacing: "0.08em",
+              color: "#6A6A6A",
+              textDecoration: "none",
+              whiteSpace: "nowrap",
+              transition: "color 0.3s ease",
+            }}
+            onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.color = "#1A1A1A")}
+            onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.color = "#6A6A6A")}
+          >
+            Наблюдения
+          </Link>
+          <button
+            onClick={onScrollToContact}
+            style={{
+              fontSize: "12px",
+              letterSpacing: "0.08em",
+              background: "none",
+              border: "1px solid #2C2C2C",
+              padding: "9px 18px",
+              cursor: "pointer",
+              color: "#2C2C2C",
+              transition: "all 0.3s ease",
+              whiteSpace: "nowrap",
+            }}
+            onMouseEnter={e => {
+              (e.currentTarget as HTMLButtonElement).style.background = "#2C2C2C";
+              (e.currentTarget as HTMLButtonElement).style.color = "#FAF9F7";
+            }}
+            onMouseLeave={e => {
+              (e.currentTarget as HTMLButtonElement).style.background = "none";
+              (e.currentTarget as HTMLButtonElement).style.color = "#2C2C2C";
+            }}
+          >
+            Обсудить запрос
+          </button>
+        </div>
       </header>
 
       {/* ─── HERO ────────────────────────────────────────────── */}
