@@ -136,7 +136,17 @@ export default function PremiumContact() {
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <div className="pm-footer-grid">
             <div>
-              <p style={{ fontSize: "13px", fontWeight: 500, color: "#1A1A1A", marginBottom: "8px", letterSpacing: "0.04em" }}>Остеопат+</p>
+              <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "8px" }}>
+                <div style={{
+                  width: "28px", height: "28px", borderRadius: "50%",
+                  background: "linear-gradient(135deg, #C5B9A8 0%, #8A7D6B 100%)",
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  flexShrink: 0,
+                }}>
+                  <div style={{ width: "10px", height: "10px", borderRadius: "50%", background: "#FAF9F7" }} />
+                </div>
+                <span style={{ fontSize: "13px", fontWeight: 500, color: "#1A1A1A", letterSpacing: "0.04em" }}>Остеопат+</span>
+              </div>
               <p style={{ fontSize: "13px", color: "#9A9A9A", lineHeight: 1.7 }}>Забота о вашем теле.</p>
             </div>
             <div>
