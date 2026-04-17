@@ -115,7 +115,7 @@ export default function Premium() {
       {/* ─── HERO ────────────────────────────────────────────── */}
       <section
         style={{
-          minHeight: "100vh",
+          minHeight: "60vh",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
