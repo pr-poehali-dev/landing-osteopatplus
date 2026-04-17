@@ -273,31 +273,62 @@ export default function Premium() {
             </p>
           </FadeIn>
           <FadeIn delay={150}>
-            <div style={{ display: "flex", flexDirection: "column", gap: "1px" }}>
-              {[
-                { num: "17", label: "лет практики" },
-                { num: "100%", label: "индивидуальный подход" },
-                { num: "Exclusive", label: "формат работы" },
-              ].map(item => (
-                <div
-                  key={item.num}
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "40px" }}>
+              {/* Круглое фото */}
+              <div style={{ position: "relative" }}>
+                <div style={{
+                  position: "absolute",
+                  inset: "-8px",
+                  borderRadius: "50%",
+                  border: "1px solid rgba(197,185,168,0.6)",
+                }} />
+                <div style={{
+                  position: "absolute",
+                  inset: "-20px",
+                  borderRadius: "50%",
+                  border: "1px solid rgba(197,185,168,0.2)",
+                }} />
+                <img
+                  src="https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/bucket/2291e50a-e4f9-49ca-908b-8a23aef3bb4f.png"
+                  alt="Специалист"
                   style={{
-                    padding: "40px 0",
-                    borderBottom: "1px solid rgba(0,0,0,0.07)",
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "baseline",
-                    gap: "24px",
+                    width: "220px",
+                    height: "220px",
+                    borderRadius: "50%",
+                    objectFit: "cover",
+                    objectPosition: "top center",
+                    display: "block",
+                    boxShadow: "0 16px 48px rgba(0,0,0,0.12)",
                   }}
-                >
-                  <span style={{ fontSize: "clamp(36px, 4vw, 52px)", fontWeight: 200, letterSpacing: "-0.03em", color: "#1A1A1A" }}>
-                    {item.num}
-                  </span>
-                  <span style={{ fontSize: "14px", color: "#8A8A8A", textAlign: "right", maxWidth: "160px" }}>
-                    {item.label}
-                  </span>
-                </div>
-              ))}
+                />
+              </div>
+              {/* Статистика */}
+              <div style={{ display: "flex", flexDirection: "column", gap: "1px", width: "100%" }}>
+                {[
+                  { num: "17", label: "лет практики" },
+                  { num: "100%", label: "индивидуальный подход" },
+                  { num: "Exclusive", label: "формат работы" },
+                ].map(item => (
+                  <div
+                    key={item.num}
+                    style={{
+                      padding: "28px 0",
+                      borderBottom: "1px solid rgba(0,0,0,0.07)",
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "baseline",
+                      gap: "24px",
+                    }}
+                  >
+                    <span style={{ fontSize: "clamp(30px, 3.5vw, 44px)", fontWeight: 200, letterSpacing: "-0.03em", color: "#1A1A1A" }}>
+                      {item.num}
+                    </span>
+                    <span style={{ fontSize: "14px", color: "#8A8A8A", textAlign: "right", maxWidth: "160px" }}>
+                      {item.label}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
           </FadeIn>
         </div>
