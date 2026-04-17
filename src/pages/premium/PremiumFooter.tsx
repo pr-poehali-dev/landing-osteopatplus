@@ -23,7 +23,6 @@ export default function PremiumFooter() {
               <a href="tel:+79029007474" style={{ fontSize: "13px", color: "#5A5A5A", textDecoration: "none" }}>+7 (902) 900-74-74</a>
               <a href="mailto:svodopianoff@yandex.ru" style={{ fontSize: "13px", color: "#5A5A5A", textDecoration: "none" }}>svodopianoff@yandex.ru</a>
               <span style={{ fontSize: "13px", color: "#5A5A5A" }}>Москва, ул. Новослободская, д. 14/19 стр. 1</span>
-              <a href="https://t.me/osteomanual" target="_blank" rel="noopener noreferrer" style={{ fontSize: "13px", color: "#5A5A5A", textDecoration: "none" }}>Telegram: @osteomanual</a>
             </div>
           </div>
           <div className="pm-footer-right">
