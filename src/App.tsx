@@ -15,6 +15,7 @@ import Politics from "./pages/Politics";
 import Premium from "./pages/Premium";
 import Observations from "./pages/Observations";
 import NotFound from "./pages/NotFound";
+import NotFoundCustom from "./pages/NotFoundCustom";
 import CookieConsent from "./components/CookieConsent";
 
 const queryClient = new QueryClient();
@@ -32,7 +33,7 @@ const App = () => (
           <Route path="/politics" element={<Politics />} />
           <Route path="/observations" element={<Observations />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<NotFoundCustom />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
