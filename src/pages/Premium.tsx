@@ -145,20 +145,22 @@ export default function Premium() {
             position: "relative",
             zIndex: 2,
             padding: "0 48px 96px",
-            display: "flex",
-            alignItems: "flex-end",
-            gap: "64px",
             width: "100%",
             boxSizing: "border-box",
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: "80px",
+            alignItems: "flex-end",
           }}
         >
-          <div style={{ flex: 1, maxWidth: "640px" }}>
+          {/* левая колонка — заголовок */}
+          <div>
             <p
               style={{
                 fontSize: "12px",
                 letterSpacing: "0.2em",
                 textTransform: "uppercase",
-                color: "rgba(255,255,255,0.55)",
+                color: "rgba(255,255,255,0.45)",
                 marginBottom: "24px",
               }}
             >
@@ -166,49 +168,52 @@ export default function Premium() {
             </p>
             <h1
               style={{
-                fontSize: "clamp(36px, 6vw, 72px)",
+                fontSize: "clamp(36px, 5vw, 68px)",
                 fontWeight: 300,
-                lineHeight: 1.1,
+                lineHeight: 1.08,
                 color: "#FFFFFF",
-                marginBottom: "32px",
                 letterSpacing: "-0.02em",
+                margin: 0,
               }}
             >
-              Персональная работа<br />
+              Персональная работа
               с телом и состоянием
             </h1>
+          </div>
+          {/* правая колонка — подзаголовок + кнопка */}
+          <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-end", gap: "40px" }}>
             <p
               style={{
-                fontSize: "clamp(15px, 2vw, 18px)",
-                color: "rgba(255,255,255,0.72)",
-                lineHeight: 1.7,
-                marginBottom: "48px",
-                maxWidth: "520px",
+                fontSize: "clamp(15px, 1.6vw, 19px)",
+                color: "rgba(255,255,255,0.65)",
+                lineHeight: 1.75,
+                margin: 0,
               }}
             >
               Помогаю восстановить баланс, устойчивость и ресурс
               через индивидуальную работу с телом
             </p>
+            <button
+              onClick={scrollToContact}
+              style={{
+                alignSelf: "flex-start",
+                fontSize: "13px",
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                background: "#FAF9F7",
+                border: "none",
+                padding: "18px 48px",
+                cursor: "pointer",
+                color: "#2C2C2C",
+                transition: "opacity 0.3s",
+                fontFamily: "inherit",
+              }}
+              onMouseEnter={e => ((e.currentTarget as HTMLButtonElement).style.opacity = "0.85")}
+              onMouseLeave={e => ((e.currentTarget as HTMLButtonElement).style.opacity = "1")}
+            >
+              Обсудить запрос
+            </button>
           </div>
-
-          <button
-            onClick={scrollToContact}
-            style={{
-              fontSize: "13px",
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-              background: "#FAF9F7",
-              border: "none",
-              padding: "18px 48px",
-              cursor: "pointer",
-              color: "#2C2C2C",
-              transition: "opacity 0.3s",
-            }}
-            onMouseEnter={e => ((e.currentTarget as HTMLButtonElement).style.opacity = "0.85")}
-            onMouseLeave={e => ((e.currentTarget as HTMLButtonElement).style.opacity = "1")}
-          >
-            Обсудить запрос
-          </button>
         </div>
 
       </section>
