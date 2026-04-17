@@ -6,6 +6,7 @@ import PremiumFooter from "./PremiumFooter";
 const PREVIEW_NOTES = [
   "Тело не врёт. Оно точно показывает, в каком напряжении вы живёте.",
   "Разовое облегчение — это не результат. Результат — когда состояние не откатывается.",
+  "Если постоянно «нужно расслабляться» — значит система изначально работает неправильно.",
 ];
 
 const SEND_BOOKING_URL = "https://functions.poehali.dev/955b4e10-ed02-4e78-8fb5-77bffbe148cb";
@@ -51,12 +52,12 @@ export default function PremiumContact() {
           {PREVIEW_NOTES.map((text, i) => (
             <FadeIn key={i} delay={i * 100}>
               <div style={{
-                background: i === 0 ? "#FFFEF5" : "#F5FAF5",
+                background: i === 0 ? "#FFFEF5" : i === 1 ? "#F5FAF5" : "#F5F5FA",
                 border: "1px solid rgba(0,0,0,0.07)",
                 boxShadow: "2px 4px 18px rgba(0,0,0,0.06)",
                 padding: "32px 28px 36px",
                 position: "relative",
-                transform: i === 0 ? "rotate(-0.8deg)" : "rotate(0.9deg)",
+                transform: i === 0 ? "rotate(-0.8deg)" : i === 1 ? "rotate(0.9deg)" : "rotate(-0.5deg)",
               }}>
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "3px", background: "linear-gradient(135deg, #C5B9A8 0%, #8A7D6B 100%)" }} />
                 <div style={{ fontSize: "11px", letterSpacing: "0.15em", textTransform: "uppercase", color: "#C5B9A8", marginBottom: "16px", fontWeight: 500 }}>
