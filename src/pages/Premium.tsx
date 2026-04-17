@@ -190,46 +190,7 @@ export default function Premium() {
               через индивидуальную работу с телом
             </p>
           </div>
-          <div style={{ flexShrink: 0, display: "flex", alignItems: "flex-end", position: "relative" }}>
-            {/* декоративная рамка смещена */}
-            <div style={{
-              position: "absolute",
-              top: "16px",
-              left: "16px",
-              right: "-16px",
-              bottom: "-16px",
-              border: "1px solid rgba(197,185,168,0.5)",
-              pointerEvents: "none",
-              zIndex: 0,
-            }} />
-            <div style={{
-              position: "relative",
-              zIndex: 1,
-              overflow: "hidden",
-              boxShadow: "0 32px 80px rgba(0,0,0,0.35)",
-            }}>
-              <img
-                src="https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/bucket/2291e50a-e4f9-49ca-908b-8a23aef3bb4f.png"
-                alt="Специалист"
-                style={{
-                  display: "block",
-                  width: "clamp(200px, 22vw, 320px)",
-                  height: "clamp(280px, 32vw, 460px)",
-                  objectFit: "cover",
-                  objectPosition: "top center",
-                }}
-              />
-              {/* тонкий градиент снизу */}
-              <div style={{
-                position: "absolute",
-                bottom: 0,
-                left: 0,
-                right: 0,
-                height: "30%",
-                background: "linear-gradient(to top, rgba(30,28,26,0.45), transparent)",
-              }} />
-            </div>
-          </div>
+
           <button
             onClick={scrollToContact}
             style={{
