@@ -75,14 +75,16 @@ export default function Premium() {
           borderBottom: "1px solid rgba(0,0,0,0.06)",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-          <img
-            src="https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/bucket/2291e50a-e4f9-49ca-908b-8a23aef3bb4f.png"
-            alt="Специалист"
-            style={{ width: "36px", height: "36px", borderRadius: "50%", objectFit: "cover", objectPosition: "top" }}
-          />
-          <span style={{ fontSize: "13px", letterSpacing: "0.12em", textTransform: "uppercase", color: "#7A7A7A" }}>
-            Персональная практика
+        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+          <div style={{
+            width: "28px", height: "28px", borderRadius: "50%",
+            background: "linear-gradient(135deg, #C5B9A8 0%, #8A7D6B 100%)",
+            display: "flex", alignItems: "center", justifyContent: "center",
+          }}>
+            <div style={{ width: "10px", height: "10px", borderRadius: "50%", background: "#FAF9F7" }} />
+          </div>
+          <span style={{ fontSize: "13px", letterSpacing: "0.15em", textTransform: "uppercase", color: "#3A3A3A", fontWeight: 500 }}>
+            Private Practice
           </span>
         </div>
         <button
@@ -143,45 +145,64 @@ export default function Premium() {
             position: "relative",
             zIndex: 2,
             padding: "0 48px 96px",
-            maxWidth: "760px",
+            display: "flex",
+            alignItems: "flex-end",
+            gap: "64px",
+            width: "100%",
+            boxSizing: "border-box",
           }}
         >
-          <p
-            style={{
-              fontSize: "12px",
-              letterSpacing: "0.2em",
-              textTransform: "uppercase",
-              color: "rgba(255,255,255,0.55)",
-              marginBottom: "24px",
-            }}
-          >
-            Индивидуальная работа
-          </p>
-          <h1
-            style={{
-              fontSize: "clamp(36px, 6vw, 72px)",
-              fontWeight: 300,
-              lineHeight: 1.1,
-              color: "#FFFFFF",
-              marginBottom: "32px",
-              letterSpacing: "-0.02em",
-            }}
-          >
-            Персональная работа<br />
-            с телом и состоянием
-          </h1>
-          <p
-            style={{
-              fontSize: "clamp(15px, 2vw, 18px)",
-              color: "rgba(255,255,255,0.72)",
-              lineHeight: 1.7,
-              marginBottom: "48px",
-              maxWidth: "520px",
-            }}
-          >
-            Помогаю восстановить баланс, устойчивость и ресурс
-            через индивидуальную работу с телом
-          </p>
+          <div style={{ flex: 1, maxWidth: "640px" }}>
+            <p
+              style={{
+                fontSize: "12px",
+                letterSpacing: "0.2em",
+                textTransform: "uppercase",
+                color: "rgba(255,255,255,0.55)",
+                marginBottom: "24px",
+              }}
+            >
+              Индивидуальная работа
+            </p>
+            <h1
+              style={{
+                fontSize: "clamp(36px, 6vw, 72px)",
+                fontWeight: 300,
+                lineHeight: 1.1,
+                color: "#FFFFFF",
+                marginBottom: "32px",
+                letterSpacing: "-0.02em",
+              }}
+            >
+              Персональная работа<br />
+              с телом и состоянием
+            </h1>
+            <p
+              style={{
+                fontSize: "clamp(15px, 2vw, 18px)",
+                color: "rgba(255,255,255,0.72)",
+                lineHeight: 1.7,
+                marginBottom: "48px",
+                maxWidth: "520px",
+              }}
+            >
+              Помогаю восстановить баланс, устойчивость и ресурс
+              через индивидуальную работу с телом
+            </p>
+          </div>
+          <div style={{ flexShrink: 0, display: "flex", alignItems: "flex-end" }}>
+            <img
+              src="https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/bucket/2291e50a-e4f9-49ca-908b-8a23aef3bb4f.png"
+              alt="Специалист"
+              style={{
+                width: "clamp(200px, 22vw, 340px)",
+                height: "clamp(260px, 30vw, 440px)",
+                objectFit: "cover",
+                objectPosition: "top",
+                filter: "brightness(0.95)",
+              }}
+            />
+          </div>
           <button
             onClick={scrollToContact}
             style={{
