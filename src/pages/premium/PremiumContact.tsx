@@ -137,7 +137,7 @@ export default function PremiumContact() {
           <div className="pm-footer-grid">
             <div>
               <p style={{ fontSize: "13px", fontWeight: 500, color: "#1A1A1A", marginBottom: "8px", letterSpacing: "0.04em" }}>Остеопат+</p>
-              <p style={{ fontSize: "13px", color: "#9A9A9A", lineHeight: 1.7 }}>Остеопатия с 17-летним опытом.<br />Забота о вашем здоровье.</p>
+              <p style={{ fontSize: "13px", color: "#9A9A9A", lineHeight: 1.7 }}>Остеопатия с 17-летним опытом.<br />Забота о вашем теле.</p>
             </div>
             <div>
               <p style={{ fontSize: "11px", letterSpacing: "0.15em", textTransform: "uppercase", color: "#B0B0B0", marginBottom: "16px" }}>Контакты</p>
