@@ -41,21 +41,6 @@ export default function PremiumHero({ onScrollToContact }: PremiumHeroProps) {
           </span>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-          <Link
-            to="/observations"
-            style={{
-              fontSize: "12px",
-              letterSpacing: "0.08em",
-              color: "#6A6A6A",
-              textDecoration: "none",
-              whiteSpace: "nowrap",
-              transition: "color 0.3s ease",
-            }}
-            onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.color = "#1A1A1A")}
-            onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.color = "#6A6A6A")}
-          >
-            Наблюдения
-          </Link>
           <button
             onClick={onScrollToContact}
             style={{
