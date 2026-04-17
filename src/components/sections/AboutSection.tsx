@@ -31,7 +31,7 @@ const AboutSection = ({ onBookingClick }: AboutSectionProps) => {
                   <strong className="text-foreground">Сергей Водопьянов</strong> — остеопат с 17-летним опытом работы. 
                   <a href="https://assotsiatsiya-osteopatov.ru/user/svodopianoff/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-accent transition-colors">
                     Член Российской остеопатической ассоциации
-                  </a>.
+                  </a>. Член Ассоциации остеопатов и мануальных практиков.
                 </p>
                 <p>
                   За годы практики работал с тысячами людей, помогая улучшить самочувствие при болях в спине и шее, 
