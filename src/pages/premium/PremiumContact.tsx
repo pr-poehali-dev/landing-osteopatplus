@@ -1,6 +1,12 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { FadeIn } from "./PremiumUtils";
 import PremiumFooter from "./PremiumFooter";
+
+const PREVIEW_NOTES = [
+  "Тело не врёт. Оно точно показывает, в каком напряжении вы живёте.",
+  "Разовое облегчение — это не результат. Результат — когда состояние не откатывается.",
+];
 
 const SEND_BOOKING_URL = "https://functions.poehali.dev/955b4e10-ed02-4e78-8fb5-77bffbe148cb";
 
@@ -34,6 +40,64 @@ export default function PremiumContact() {
 
   return (
     <>
+      {/* ─── МОИ НАБЛЮДЕНИЯ ──────────────────────────────────── */}
+      <section className="pm-section-pad" style={{ maxWidth: "1100px", margin: "0 auto" }}>
+        <FadeIn>
+          <p style={{ fontSize: "11px", letterSpacing: "0.2em", textTransform: "uppercase", color: "#A0A0A0", marginBottom: "40px" }}>
+            Мои наблюдения
+          </p>
+        </FadeIn>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "24px", marginBottom: "40px" }}>
+          {PREVIEW_NOTES.map((text, i) => (
+            <FadeIn key={i} delay={i * 100}>
+              <div style={{
+                background: i === 0 ? "#FFFEF5" : "#F5FAF5",
+                border: "1px solid rgba(0,0,0,0.07)",
+                boxShadow: "2px 4px 18px rgba(0,0,0,0.06)",
+                padding: "32px 28px 36px",
+                position: "relative",
+                transform: i === 0 ? "rotate(-0.8deg)" : "rotate(0.9deg)",
+              }}>
+                <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "3px", background: "linear-gradient(135deg, #C5B9A8 0%, #8A7D6B 100%)" }} />
+                <div style={{ fontSize: "11px", letterSpacing: "0.15em", textTransform: "uppercase", color: "#C5B9A8", marginBottom: "16px", fontWeight: 500 }}>
+                  0{i + 1}
+                </div>
+                <p style={{ fontSize: "17px", lineHeight: 1.75, color: "#2C2C2C", margin: 0, fontWeight: 300, letterSpacing: "-0.01em" }}>
+                  {text}
+                </p>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+        <FadeIn delay={200}>
+          <Link
+            to="/observations"
+            style={{
+              fontSize: "12px",
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              color: "#6A6A6A",
+              textDecoration: "none",
+              borderBottom: "1px solid rgba(0,0,0,0.2)",
+              paddingBottom: "2px",
+              transition: "color 0.3s ease, border-color 0.3s ease",
+            }}
+            onMouseEnter={e => {
+              (e.currentTarget as HTMLAnchorElement).style.color = "#1A1A1A";
+              (e.currentTarget as HTMLAnchorElement).style.borderColor = "#1A1A1A";
+            }}
+            onMouseLeave={e => {
+              (e.currentTarget as HTMLAnchorElement).style.color = "#6A6A6A";
+              (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(0,0,0,0.2)";
+            }}
+          >
+            Все наблюдения →
+          </Link>
+        </FadeIn>
+      </section>
+
+      <div className="pm-divider" />
+
       {/* ─── КОНТАКТ ─────────────────────────────────────────── */}
       <section id="contact" className="pm-section-pad" style={{ background: "#F4F2EE" }}>
         <div style={{ maxWidth: "640px", margin: "0 auto" }}>
