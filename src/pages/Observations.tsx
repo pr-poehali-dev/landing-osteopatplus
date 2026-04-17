@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { FadeIn } from "./premium/PremiumUtils";
+import PremiumFooter from "./premium/PremiumFooter";
 
 const notes = [
   "Большинство работает с симптомами. Я работаю с причиной состояния.",
@@ -151,6 +152,7 @@ export default function Observations() {
           ))}
         </div>
       </div>
+      <PremiumFooter />
     </div>
   );
 }
