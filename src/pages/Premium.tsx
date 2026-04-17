@@ -238,7 +238,7 @@ export default function Premium() {
               {[
                 { num: "17", label: "лет практики" },
                 { num: "100%", label: "индивидуальный подход" },
-                { num: "Приват", label: "формат работы" },
+                { num: "VIP", label: "формат работы" },
               ].map(item => (
                 <div
                   key={item.num}
