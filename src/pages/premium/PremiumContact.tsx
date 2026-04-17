@@ -145,7 +145,7 @@ export default function PremiumContact() {
                 }}>
                   <div style={{ width: "10px", height: "10px", borderRadius: "50%", background: "#FAF9F7" }} />
                 </div>
-                <span style={{ fontSize: "13px", fontWeight: 500, color: "#1A1A1A", letterSpacing: "0.04em" }}>Остеопат+</span>
+                <span style={{ fontSize: "13px", fontWeight: 500, color: "#1A1A1A", letterSpacing: "0.04em" }}>Private Practice</span>
               </div>
               <p style={{ fontSize: "13px", color: "#9A9A9A", lineHeight: 1.7 }}>Забота о вашем теле.</p>
             </div>
