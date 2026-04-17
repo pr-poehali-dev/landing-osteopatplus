@@ -34,9 +34,10 @@ export default function PremiumFooter() {
               style={{
                 display: "inline-flex", alignItems: "center", gap: "8px",
                 padding: "10px 20px", marginBottom: "16px",
-                background: "#2AABEE", borderRadius: "8px",
-                fontSize: "13px", fontWeight: 500, color: "#fff",
-                textDecoration: "none", letterSpacing: "0.02em",
+                background: "transparent", borderRadius: "8px",
+                border: "1px solid rgba(0,0,0,0.15)",
+                fontSize: "13px", fontWeight: 500, color: "#5A5A5A",
+                textDecoration: "none", letterSpacing: "0.04em",
               }}
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
