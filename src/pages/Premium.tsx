@@ -207,9 +207,6 @@ export default function Premium() {
           }}
         >
           <div style={{ width: "1px", height: "56px", background: "rgba(255,255,255,0.3)" }} />
-          <span style={{ fontSize: "11px", letterSpacing: "0.15em", color: "rgba(255,255,255,0.4)", writingMode: "vertical-rl", textTransform: "uppercase" }}>
-            Scroll
-          </span>
         </div>
       </section>
 
