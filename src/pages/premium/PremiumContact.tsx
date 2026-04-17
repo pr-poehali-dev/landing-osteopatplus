@@ -1,13 +1,34 @@
 import { useState } from "react";
 import { FadeIn } from "./PremiumUtils";
 
+const SEND_BOOKING_URL = "https://functions.poehali.dev/955b4e10-ed02-4e78-8fb5-77bffbe148cb";
+
 export default function PremiumContact() {
   const [formData, setFormData] = useState({ name: "", contact: "", message: "" });
+  const [agreed, setAgreed] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    if (!agreed) { setError("Необходимо согласие с политикой конфиденциальности"); return; }
+    setError("");
+    setLoading(true);
+    try {
+      const res = await fetch(SEND_BOOKING_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Ошибка отправки");
+      setSubmitted(true);
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : "Ошибка отправки");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -74,6 +95,7 @@ export default function PremiumContact() {
                   <textarea
                     id="message"
                     rows={4}
+                    required
                     placeholder="Опишите в нескольких словах, что вас беспокоит или что хотите изменить"
                     value={formData.message}
                     onChange={e => setFormData(prev => ({ ...prev, message: e.target.value }))}
@@ -88,14 +110,36 @@ export default function PremiumContact() {
                       resize: "none",
                       fontFamily: "inherit",
                       lineHeight: 1.7,
-                      marginBottom: "48px",
+                      marginBottom: "32px",
                       width: "100%",
                       boxSizing: "border-box",
                     }}
                   />
                 </div>
+
+                <label style={{ display: "flex", alignItems: "flex-start", gap: "12px", marginBottom: "32px", cursor: "pointer" }}>
+                  <input
+                    type="checkbox"
+                    checked={agreed}
+                    onChange={e => setAgreed(e.target.checked)}
+                    style={{ marginTop: "2px", width: "16px", height: "16px", flexShrink: 0, cursor: "pointer", accentColor: "#1A1A1A" }}
+                  />
+                  <span style={{ fontSize: "13px", color: "#7A7A7A", lineHeight: 1.6 }}>
+                    Я согласен(а) с{" "}
+                    <a href="/politics" style={{ color: "#1A1A1A", textDecoration: "underline" }}>
+                      политикой конфиденциальности
+                    </a>{" "}
+                    и даю согласие на обработку персональных данных
+                  </span>
+                </label>
+
+                {error && (
+                  <p style={{ fontSize: "13px", color: "#C0392B", marginBottom: "20px" }}>{error}</p>
+                )}
+
                 <button
                   type="submit"
+                  disabled={loading}
                   style={{
                     alignSelf: "flex-start",
                     fontSize: "13px",
@@ -104,15 +148,16 @@ export default function PremiumContact() {
                     background: "#1A1A1A",
                     border: "none",
                     padding: "20px 56px",
-                    cursor: "pointer",
+                    cursor: loading ? "not-allowed" : "pointer",
                     color: "#FAF9F7",
                     fontFamily: "inherit",
                     transition: "opacity 0.3s",
+                    opacity: loading ? 0.6 : 1,
                   }}
-                  onMouseEnter={e => ((e.currentTarget as HTMLButtonElement).style.opacity = "0.8")}
-                  onMouseLeave={e => ((e.currentTarget as HTMLButtonElement).style.opacity = "1")}
+                  onMouseEnter={e => { if (!loading) (e.currentTarget as HTMLButtonElement).style.opacity = "0.8"; }}
+                  onMouseLeave={e => { if (!loading) (e.currentTarget as HTMLButtonElement).style.opacity = "1"; }}
                 >
-                  Отправить
+                  {loading ? "Отправка..." : "Отправить"}
                 </button>
               </form>
             </FadeIn>

@@ -5,8 +5,8 @@
       "method": "POST",
       "body": {
         "name": "Иван Иванов",
-        "phone": "+7 900 123-45-67",
-        "comment": "Боли в спине"
+        "contact": "+7 900 123-45-67",
+        "message": "Боли в спине и шее"
       },
       "expectedStatus": 200,
       "expectedBody": {

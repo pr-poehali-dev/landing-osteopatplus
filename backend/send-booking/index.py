@@ -34,18 +34,18 @@ def handler(event: dict, context) -> dict:
     
     try:
         body = json.loads(event.get('body', '{}'))
-        name = body.get('name', '')
-        phone = body.get('phone', '')
-        comment = body.get('comment', '')
+        name = body.get('name', '').strip()
+        contact = body.get('contact', '').strip()
+        message_text = body.get('message', '').strip()
         
-        if not name or not phone:
+        if not name or not contact or not message_text:
             return {
                 'statusCode': 400,
                 'headers': {
                     'Content-Type': 'application/json',
                     'Access-Control-Allow-Origin': '*'
                 },
-                'body': json.dumps({'error': 'Имя и телефон обязательны'}),
+                'body': json.dumps({'error': 'Все поля обязательны для заполнения'}),
                 'isBase64Encoded': False
             }
         
@@ -63,13 +63,11 @@ def handler(event: dict, context) -> dict:
                 'isBase64Encoded': False
             }
         
-        message = f"""🔔 Новая заявка на запись!
+        message = f"""🔔 Новая заявка с сайта (Private Practice)!
 
 👤 Имя: {name}
-📞 Телефон: {phone}"""
-        
-        if comment:
-            message += f"\n💬 Комментарий: {comment}"
+📞 Контакт: {contact}
+💬 Запрос: {message_text}"""
         
         url = f'https://api.telegram.org/bot{bot_token}/sendMessage'
         data = urllib.parse.urlencode({
