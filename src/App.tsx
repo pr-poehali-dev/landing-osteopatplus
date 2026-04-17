@@ -20,7 +20,7 @@ const App = () => (
       <CookieConsent />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route path="/" element={<Premium />} />
           <Route path="/politics" element={<Politics />} />
           <Route path="/premium" element={<Premium />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
