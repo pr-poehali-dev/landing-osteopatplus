@@ -4,7 +4,6 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
 import Politics from "./pages/Politics";
 import Premium from "./pages/Premium";
 import NotFound from "./pages/NotFound";
@@ -22,7 +21,6 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Premium />} />
           <Route path="/politics" element={<Politics />} />
-          <Route path="/premium" element={<Premium />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
