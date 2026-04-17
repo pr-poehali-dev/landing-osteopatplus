@@ -194,20 +194,7 @@ export default function Premium() {
             Обсудить запрос
           </button>
         </div>
-        <div
-          style={{
-            position: "absolute",
-            bottom: "40px",
-            right: "48px",
-            zIndex: 2,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: "8px",
-          }}
-        >
-          <div style={{ width: "1px", height: "56px", background: "rgba(255,255,255,0.3)" }} />
-        </div>
+
       </section>
 
       {/* ─── О СПЕЦИАЛИСТЕ ───────────────────────────────────── */}
