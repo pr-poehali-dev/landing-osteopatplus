@@ -38,18 +38,41 @@ export default function PremiumContent() {
                   borderRadius: "50%",
                   border: "1px solid rgba(197,185,168,0.2)",
                 }} />
-                <img
-                  src="https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/bucket/2291e50a-e4f9-49ca-908b-8a23aef3bb4f.png"
-                  alt="Специалист"
+                <div
                   className="pm-photo-img"
                   style={{
                     borderRadius: "50%",
-                    objectFit: "cover",
-                    objectPosition: "top center",
                     display: "block",
                     boxShadow: "0 16px 48px rgba(0,0,0,0.12)",
+                    overflow: "hidden",
+                    position: "relative",
+                    flexShrink: 0,
                   }}
-                />
+                >
+                  <img
+                    src="https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/files/c40d2ccf-ac94-475b-bb1b-8a52fa8ab6de.jpg"
+                    alt=""
+                    style={{
+                      position: "absolute",
+                      inset: 0,
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                  />
+                  <img
+                    src="https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/bucket/25414d0b-888a-4344-88e4-b7e28ca9520d.png"
+                    alt="Специалист"
+                    style={{
+                      position: "relative",
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "top center",
+                      display: "block",
+                    }}
+                  />
+                </div>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "1px", width: "100%" }}>
                 {[
