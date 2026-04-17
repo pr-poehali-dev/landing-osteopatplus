@@ -118,7 +118,7 @@ export default function Premium() {
           minHeight: "100vh",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "flex-end",
+          justifyContent: "center",
           position: "relative",
           overflow: "hidden",
         }}
@@ -144,7 +144,7 @@ export default function Premium() {
           style={{
             position: "relative",
             zIndex: 2,
-            padding: "0 48px 96px",
+            padding: "96px 48px",
             width: "100%",
             boxSizing: "border-box",
             display: "grid",
