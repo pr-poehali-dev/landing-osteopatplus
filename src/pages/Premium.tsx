@@ -75,9 +75,16 @@ export default function Premium() {
           borderBottom: "1px solid rgba(0,0,0,0.06)",
         }}
       >
-        <span style={{ fontSize: "13px", letterSpacing: "0.12em", textTransform: "uppercase", color: "#7A7A7A" }}>
-          Персональная практика
-        </span>
+        <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+          <img
+            src="https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/bucket/2291e50a-e4f9-49ca-908b-8a23aef3bb4f.png"
+            alt="Специалист"
+            style={{ width: "36px", height: "36px", borderRadius: "50%", objectFit: "cover", objectPosition: "top" }}
+          />
+          <span style={{ fontSize: "13px", letterSpacing: "0.12em", textTransform: "uppercase", color: "#7A7A7A" }}>
+            Персональная практика
+          </span>
+        </div>
         <button
           onClick={scrollToContact}
           style={{
@@ -533,13 +540,26 @@ export default function Premium() {
       </section>
 
       {/* ─── FOOTER ──────────────────────────────────────────── */}
-      <footer style={{ padding: "48px", display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: "1px solid rgba(0,0,0,0.07)" }}>
-        <span style={{ fontSize: "12px", color: "#B0B0B0", letterSpacing: "0.05em" }}>
-          Персональная практика
-        </span>
-        <span style={{ fontSize: "12px", color: "#C0C0C0" }}>
-          © 2026
-        </span>
+      <footer style={{ padding: "48px", borderTop: "1px solid rgba(0,0,0,0.07)" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "48px", alignItems: "start" }}>
+          <div>
+            <p style={{ fontSize: "13px", fontWeight: 500, color: "#1A1A1A", marginBottom: "8px", letterSpacing: "0.04em" }}>Остеопат+</p>
+            <p style={{ fontSize: "13px", color: "#9A9A9A", lineHeight: 1.7 }}>Остеопатия с 17-летним опытом.<br />Забота о вашем здоровье.</p>
+          </div>
+          <div>
+            <p style={{ fontSize: "11px", letterSpacing: "0.15em", textTransform: "uppercase", color: "#B0B0B0", marginBottom: "16px" }}>Контакты</p>
+            <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+              <a href="tel:+79029007474" style={{ fontSize: "13px", color: "#5A5A5A", textDecoration: "none" }}>+7 (902) 900-74-74</a>
+              <a href="mailto:svodopianoff@yandex.ru" style={{ fontSize: "13px", color: "#5A5A5A", textDecoration: "none" }}>svodopianoff@yandex.ru</a>
+              <span style={{ fontSize: "13px", color: "#5A5A5A" }}>Москва, ул. Новослободская, д. 14/19 стр. 1</span>
+              <a href="https://t.me/osteomanual" target="_blank" rel="noopener noreferrer" style={{ fontSize: "13px", color: "#5A5A5A", textDecoration: "none" }}>Telegram: @osteomanual</a>
+            </div>
+          </div>
+          <div style={{ textAlign: "right" }}>
+            <p style={{ fontSize: "12px", color: "#C0C0C0", marginBottom: "8px" }}>© 2026 Остеопат+. Все права защищены.</p>
+            <a href="/politics" style={{ fontSize: "12px", color: "#C0C0C0", textDecoration: "none" }}>Политика конфиденциальности</a>
+          </div>
+        </div>
       </footer>
 
       {/* ─── MOBILE STYLES ───────────────────────────────────── */}
