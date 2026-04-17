@@ -22,6 +22,9 @@ export default function PremiumContent() {
               Каждая работа — индивидуальна и строится вокруг конкретного человека и его состояния.
               Никаких шаблонных протоколов.
             </p>
+            <p style={{ fontSize: "15px", lineHeight: 1.75, color: "#8A8A8A", marginTop: "24px" }}>
+              Член Ассоциации остеопатов и мануальных практиков
+            </p>
           </FadeIn>
           <FadeIn delay={150}>
             <div className="pm-photo-block">
