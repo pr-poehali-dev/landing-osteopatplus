@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FadeIn } from "./premium/PremiumUtils";
 import PremiumFooter from "./premium/PremiumFooter";
@@ -16,6 +17,16 @@ const rotations = ["-1.2deg", "1.5deg", "-0.7deg", "1.1deg", "-1.8deg", "0.9deg"
 const offsets = ["-2px", "3px", "-1px", "2px", "-3px", "1px", "-2px"];
 
 export default function Observations() {
+  useEffect(() => {
+    document.title = "Наблюдения из практики — Остеопат Сергей Водопьянов";
+    const desc = document.querySelector('meta[name="description"]');
+    if (desc) desc.setAttribute("content", "Наблюдения остеопата из многолетней практики: о теле, напряжении, состоянии и причинах дискомфорта. Частная практика Сергея Водопьянова в Москве.");
+    return () => {
+      document.title = "Остеопат в Москве — частная практика Сергея Водопьянова";
+      if (desc) desc.setAttribute("content", "Частная остеопатическая практика в Москве на Новослободской. Работаю с болями в спине, шее, головными болями, восстановлением после травм. Запись на приём.");
+    };
+  }, []);
+
   return (
     <div
       style={{
