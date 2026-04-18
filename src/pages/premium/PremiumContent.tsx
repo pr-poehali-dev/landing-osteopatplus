@@ -76,6 +76,9 @@ export default function PremiumContent() {
                     }}
                   />
                 </div>
+                <div style={{ textAlign: "center", paddingTop: "10px", fontSize: "13px", letterSpacing: "0.06em", color: "#4A4A4A" }}>
+                  Сергей Водопьянов
+                </div>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "1px", width: "100%" }}>
                 {[
