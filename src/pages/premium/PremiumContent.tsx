@@ -29,18 +29,7 @@ export default function PremiumContent() {
           <FadeIn delay={150}>
             <div className="pm-photo-block">
               <div style={{ position: "relative" }}>
-                <div style={{
-                  position: "absolute",
-                  inset: "-8px",
-                  borderRadius: "50%",
-                  border: "1px solid rgba(197,185,168,0.6)",
-                }} />
-                <div style={{
-                  position: "absolute",
-                  inset: "-20px",
-                  borderRadius: "50%",
-                  border: "1px solid rgba(197,185,168,0.2)",
-                }} />
+
                 <div
                   className="pm-photo-img"
                   style={{
