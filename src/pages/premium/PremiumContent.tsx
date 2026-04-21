@@ -23,7 +23,11 @@ export default function PremiumContent() {
               Никаких шаблонных протоколов.
             </p>
             <p style={{ fontSize: "15px", lineHeight: 1.75, color: "#8A8A8A", marginTop: "24px" }}>
-              Член Ассоциации остеопатов и мануальных практиков
+              Член{" "}
+              <a href="https://assotsiatsiya-osteopatov.ru/user/svodopianoff/" target="_blank" rel="noopener noreferrer" style={{ color: "#8A8A8A", textDecoration: "underline" }}>
+                Ассоциации остеопатов
+              </a>{" "}
+              и мануальных практиков
             </p>
           </FadeIn>
           <FadeIn delay={150}>
