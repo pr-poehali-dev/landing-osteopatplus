@@ -37,7 +37,7 @@ export default function PremiumHero({ onScrollToContact }: PremiumHeroProps) {
             <div style={{ width: "10px", height: "10px", borderRadius: "50%", background: "#FAF9F7" }} />
           </div>
           <span style={{ fontSize: "13px", letterSpacing: "0.15em", textTransform: "uppercase", color: "#3A3A3A", fontWeight: 500 }}>
-            Private Practice
+            Остеопат Плюс
           </span>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
