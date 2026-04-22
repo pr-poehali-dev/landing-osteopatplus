@@ -99,6 +99,30 @@ export default function PremiumContent() {
                   </div>
                 ))}
               </div>
+              <a
+                href="https://yandex.ru/navi/org/osteopat_plyus/99582120415?si=q0pkkjhuxpnz1pg2wrzu7wyc8g"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "10px",
+                  marginTop: "24px",
+                  padding: "14px 20px",
+                  border: "1px solid rgba(0,0,0,0.08)",
+                  borderRadius: "12px",
+                  textDecoration: "none",
+                  background: "#FAFAF8",
+                  transition: "background 0.2s",
+                }}
+              >
+                <span style={{ display: "flex", gap: "3px" }}>
+                  {[1,2,3,4,5].map(i => (
+                    <span key={i} style={{ color: "#F5A623", fontSize: "18px" }}>★</span>
+                  ))}
+                </span>
+                <span style={{ fontSize: "13px", color: "#4A4A4A", fontWeight: 500 }}>Отзывы на Яндекс Картах</span>
+              </a>
             </div>
           </FadeIn>
         </div>
