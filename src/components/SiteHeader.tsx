@@ -104,6 +104,22 @@ export default function SiteHeader({ onScrollToContact, dark = false }: SiteHead
               onClick={handleBooking}
               style={{
                 fontSize: "12px",
+                letterSpacing: "0.06em",
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                color: navDefault,
+                fontFamily: "inherit",
+                padding: 0,
+                transition: "color 0.2s",
+              }}
+            >
+              Контакты
+            </button>
+            <button
+              onClick={handleBooking}
+              style={{
+                fontSize: "12px",
                 letterSpacing: "0.08em",
                 background: "none",
                 border: `1px solid ${btnBorder}`,
@@ -195,6 +211,26 @@ export default function SiteHeader({ onScrollToContact, dark = false }: SiteHead
                 {link.label}
               </Link>
             ))}
+            <button
+              onClick={() => { setMenuOpen(false); handleBooking({ preventDefault: () => {} } as React.MouseEvent); }}
+              style={{
+                fontSize: "20px",
+                fontWeight: 300,
+                letterSpacing: "-0.01em",
+                color: mobileLinkColor,
+                background: "none",
+                border: "none",
+                borderBottom: `1px solid ${mobileBorder}`,
+                padding: "14px 0",
+                textAlign: "left",
+                width: "100%",
+                cursor: "pointer",
+                fontFamily: "inherit",
+                transition: "color 0.2s",
+              }}
+            >
+              Контакты
+            </button>
             <button
               onClick={handleBooking}
               style={{
