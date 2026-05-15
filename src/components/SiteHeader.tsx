@@ -8,6 +8,7 @@ interface SiteHeaderProps {
 const NAV_LINKS = [
   { label: "Обо мне", to: "/about" },
   { label: "Формат работы", to: "/format" },
+  { label: "Стоимость", to: "/pricing" },
   { label: "Наблюдения", to: "/observations" },
 ];
 
