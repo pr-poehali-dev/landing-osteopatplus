@@ -167,7 +167,7 @@ export default function SiteHeader({ onScrollToContact, dark = false }: SiteHead
         <div
           className="site-nav-mobile"
           style={{
-            maxHeight: menuOpen ? "380px" : "0",
+            maxHeight: menuOpen ? "520px" : "0",
             overflow: "hidden",
             transition: "max-height 0.4s ease",
             borderTop: menuOpen ? `1px solid ${mobileBorder}` : "none",
