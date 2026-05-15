@@ -37,10 +37,7 @@ export default function SiteHeader({ onScrollToContact, dark = false }: SiteHead
     if (pathname === "/") {
       onScrollToContact?.();
     } else {
-      window.location.href = "/";
-      setTimeout(() => {
-        document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-      }, 400);
+      window.location.href = "/#contact";
     }
   };
 

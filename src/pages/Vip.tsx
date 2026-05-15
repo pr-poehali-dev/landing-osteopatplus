@@ -20,10 +20,7 @@ const FOR_WHO = [
 
 export default function Vip() {
   const goHome = () => {
-    window.location.href = "/";
-    setTimeout(() => {
-      document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-    }, 400);
+    window.location.href = "/#contact";
   };
 
   const goPricing = () => {
