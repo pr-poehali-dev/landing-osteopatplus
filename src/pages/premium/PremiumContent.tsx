@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { FadeIn } from "./PremiumUtils";
 
 const REVIEWS = [
@@ -305,11 +306,6 @@ export default function PremiumContent({ onScrollToContact }: PremiumContentProp
                 price: "Индивидуально",
                 desc: "Формат и стоимость дальнейшей работы определяются после первичного приёма",
               },
-              {
-                title: "Персональный формат",
-                price: "По запросу",
-                desc: "Длительное сопровождение и системная работа — обсуждается отдельно",
-              },
             ].map((item, i) => (
               <FadeIn key={item.title} delay={i * 80}>
                 <div
@@ -329,6 +325,7 @@ export default function PremiumContent({ onScrollToContact }: PremiumContentProp
                 </div>
               </FadeIn>
             ))}
+            <VipCard />
           </div>
         </div>
       </section>
@@ -434,5 +431,69 @@ export default function PremiumContent({ onScrollToContact }: PremiumContentProp
         </div>
       </section>
     </>
+  );
+}
+
+function VipCard() {
+  const [hovered, setHovered] = useState(false);
+
+  return (
+    <FadeIn delay={160}>
+      <a
+        href="/vip"
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        style={{
+          display: "block",
+          padding: "48px 36px",
+          background: hovered ? "#2C2520" : "#1E1A17",
+          borderTop: "1px solid rgba(197,185,168,0.25)",
+          textDecoration: "none",
+          cursor: "pointer",
+          transition: "background 0.4s ease",
+          position: "relative",
+          overflow: "hidden",
+          height: "100%",
+          boxSizing: "border-box",
+        }}
+      >
+        {/* Золотая полоса сверху */}
+        <div style={{
+          position: "absolute", top: 0, left: 0, right: 0,
+          height: "2px",
+          background: "linear-gradient(90deg, rgba(197,185,168,0) 0%, rgba(197,185,168,0.6) 50%, rgba(197,185,168,0) 100%)",
+          opacity: hovered ? 1 : 0,
+          transition: "opacity 0.4s ease",
+        }} />
+
+        <p style={{ fontSize: "12px", letterSpacing: "0.12em", textTransform: "uppercase", color: "#C5B9A8", marginBottom: "32px" }}>
+          Персональный формат
+        </p>
+        <p style={{ fontSize: "clamp(24px, 3vw, 36px)", fontWeight: 200, color: "#F0ECE7", marginBottom: "24px", letterSpacing: "-0.02em" }}>
+          По запросу
+        </p>
+        <p style={{ fontSize: "14px", lineHeight: 1.75, color: "#5A5A5A", marginBottom: "40px" }}>
+          Длительное сопровождение и системная работа — обсуждается индивидуально
+        </p>
+
+        {/* Стрелка */}
+        <div style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "10px",
+          color: "#C5B9A8",
+          fontSize: "12px",
+          letterSpacing: "0.1em",
+          textTransform: "uppercase",
+          transform: hovered ? "translateX(6px)" : "translateX(0)",
+          transition: "transform 0.3s ease",
+        }}>
+          <span>Узнать подробнее</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="#C5B9A8" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </div>
+      </a>
+    </FadeIn>
   );
 }
