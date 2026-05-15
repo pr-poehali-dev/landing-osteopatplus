@@ -8,7 +8,12 @@ const NotFoundCustom = () => {
   useEffect(() => {
     console.error("404 Error: User attempted to access non-existent route:", location.pathname);
     document.title = "Страница не найдена — Остеопат Сергей Водопьянов";
-    return () => { document.title = "Остеопат в Москве — частная практика Сергея Водопьянова"; };
+    const desc = document.querySelector('meta[name="description"]');
+    if (desc) desc.setAttribute("content", "Запрошенная страница не найдена. Вернитесь на главную страницу частной практики остеопата Сергея Водопьянова.");
+    return () => {
+      document.title = "Остеопат в Москве — частная практика Сергея Водопьянова";
+      if (desc) desc.setAttribute("content", "Частная остеопатическая практика в Москве на Новослободской. Работаю с болями в спине, шее, головными болями, восстановлением после травм. Запись на приём.");
+    };
   }, [location.pathname]);
 
   return (

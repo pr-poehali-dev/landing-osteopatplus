@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { PREMIUM_STYLES } from "./premium/PremiumUtils";
 
 const sections = [
@@ -131,6 +132,16 @@ const sections = [
 ];
 
 const Politics = () => {
+  useEffect(() => {
+    document.title = "Политика конфиденциальности — Остеопат Сергей Водопьянов";
+    const desc = document.querySelector('meta[name="description"]');
+    if (desc) desc.setAttribute("content", "Политика обработки персональных данных ИП Водопьянов Сергей Геннадьевич. Сайт osteopatplus.ru.");
+    return () => {
+      document.title = "Остеопат в Москве — частная практика Сергея Водопьянова";
+      if (desc) desc.setAttribute("content", "Частная остеопатическая практика в Москве на Новослободской. Работаю с болями в спине, шее, головными болями, восстановлением после травм. Запись на приём.");
+    };
+  }, []);
+
   return (
     <div style={{ fontFamily: "'Inter', 'Helvetica Neue', Arial, sans-serif", background: "#FAF9F7", color: "#2C2C2C", minHeight: "100vh" }}>
       <style>{PREMIUM_STYLES}</style>
