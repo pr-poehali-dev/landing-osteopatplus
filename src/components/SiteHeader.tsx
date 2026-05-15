@@ -22,13 +22,13 @@ export default function SiteHeader({ onScrollToContact, dark = false }: SiteHead
   const border = dark ? "rgba(255,255,255,0.05)" : "rgba(0,0,0,0.06)";
   const logoText = dark ? "#C5B9A8" : "#3A3A3A";
   const navActive = dark ? "#F0ECE7" : "#1A1A1A";
-  const navDefault = dark ? "#3A3A3A" : "#6A6A6A";
+  const navDefault = dark ? "#7A7A7A" : "#6A6A6A";
   const btnBorder = dark ? "rgba(232,228,223,0.25)" : "#2C2C2C";
   const btnColor = dark ? "#9A9A9A" : "#2C2C2C";
   const burgerColor = dark ? "#C5B9A8" : "#2C2C2C";
   const mobileBg = dark ? "rgba(15,15,15,0.98)" : "rgba(250,249,247,0.97)";
   const mobileBorder = dark ? "rgba(255,255,255,0.05)" : "rgba(0,0,0,0.06)";
-  const mobileLinkColor = dark ? "#4A4A4A" : "#5A5A5A";
+  const mobileLinkColor = dark ? "#7A7A7A" : "#5A5A5A";
   const mobileActive = dark ? "#E8E4DF" : "#1A1A1A";
 
   const handleBooking = (e: React.MouseEvent) => {

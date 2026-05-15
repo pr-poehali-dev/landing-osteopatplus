@@ -169,7 +169,7 @@ export default function Vip() {
               Формат сопровождения доступен ограниченному количеству клиентов — это часть условия,
               а не маркетинговый приём.
             </p>
-            <p className="vip-body" style={{ color: "#5A5A5A" }}>
+            <p className="vip-body" style={{ color: "#7A7A7A" }}>
               Решение о подключении принимается после первичной работы и оценки состояния.
             </p>
           </FadeIn>
@@ -192,13 +192,13 @@ export default function Vip() {
                     <p style={{ fontSize: "clamp(32px, 5vw, 56px)", fontWeight: 200, color: "#E8E4DF", letterSpacing: "-0.04em", margin: 0, lineHeight: 1 }}>
                       от 60 000 ₽
                     </p>
-                    <p style={{ fontSize: "12px", color: "#4A4A4A", letterSpacing: "0.08em", marginTop: "10px" }}>/ месяц, финальная сумма — по согласованию</p>
+                    <p style={{ fontSize: "12px", color: "#7A7A7A", letterSpacing: "0.08em", marginTop: "10px" }}>/ месяц, финальная сумма — по согласованию</p>
                   </div>
                   <div style={{ borderTop: "1px solid rgba(255,255,255,0.06)", paddingTop: "28px" }}>
-                    <p className="vip-body-sm" style={{ color: "#5A5A5A", marginBottom: "6px" }}>
+                    <p className="vip-body-sm" style={{ color: "#8A8A8A", marginBottom: "6px" }}>
                       Стоимость не определяется количеством часов.
                     </p>
-                    <p className="vip-body-sm" style={{ color: "#4A4A4A" }}>
+                    <p className="vip-body-sm" style={{ color: "#7A7A7A" }}>
                       Она отражает уровень индивидуальной работы, приоритетный доступ
                       и ограниченный ресурс специалиста.
                     </p>
@@ -222,7 +222,7 @@ export default function Vip() {
               Формат доступен только после первичного приёма и личного согласования.
               Это обеспечивает правильный подбор и устойчивый результат.
             </p>
-            <p className="vip-body" style={{ color: "#5A5A5A" }}>
+            <p className="vip-body" style={{ color: "#7A7A7A" }}>
               Начните с первичного приёма — дальнейшее обсудим при встрече.
             </p>
           </FadeIn>
@@ -237,7 +237,7 @@ export default function Vip() {
             <h2 style={{ fontSize: "clamp(22px, 3vw, 38px)", fontWeight: 300, lineHeight: 1.35, letterSpacing: "-0.02em", color: "#E8E4DF", marginBottom: "20px" }}>
               Для обсуждения формата —<br />начните с первичного приёма
             </h2>
-            <p style={{ fontSize: "15px", color: "#4A4A4A", lineHeight: 1.75, marginBottom: "48px" }}>
+            <p style={{ fontSize: "15px", color: "#7A7A7A", lineHeight: 1.75, marginBottom: "48px" }}>
               Свяжитесь для уточнения доступных слотов и записи.
             </p>
             <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
@@ -297,7 +297,7 @@ const VIP_STYLES = `
   .vip-hero-sub {
     font-size: clamp(15px, 1.8vw, 18px);
     line-height: 1.8;
-    color: #5A5A5A;
+    color: #8A8A8A;
     margin-bottom: 36px;
     max-width: 600px;
   }
@@ -316,19 +316,19 @@ const VIP_STYLES = `
     font-size: 11px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #3A3A3A;
+    color: #5A5A5A;
     margin-bottom: 20px;
   }
   .vip-body {
     font-size: 17px;
     line-height: 1.85;
-    color: #6A6A6A;
+    color: #9A9A9A;
     margin: 0;
   }
   .vip-body-sm {
     font-size: 14px;
     line-height: 1.75;
-    color: #5A5A5A;
+    color: #8A8A8A;
     margin: 0;
   }
   .vip-list-row {
@@ -349,7 +349,7 @@ const VIP_STYLES = `
   .vip-list-text {
     font-size: 15px;
     line-height: 1.6;
-    color: #7A7A7A;
+    color: #A0A0A0;
   }
   .vip-how-grid {
     display: grid;
