@@ -107,7 +107,7 @@ export default function PremiumHero({ onScrollToContact }: PremiumHeroProps) {
                 marginBottom: "24px",
               }}
             >
-              Индивидуальная работа
+              Частная практика · Ограниченный формат
             </p>
             <h1
               style={{
@@ -119,22 +119,36 @@ export default function PremiumHero({ onScrollToContact }: PremiumHeroProps) {
                 margin: 0,
               }}
             >
-              Персональная работа
-              с телом и состоянием
+              Частная практика
+              восстановления
+              состояния тела
             </h1>
           </div>
           <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-end", gap: "32px" }}>
-            <p
-              style={{
-                fontSize: "clamp(15px, 1.6vw, 19px)",
-                color: "rgba(255,255,255,0.65)",
-                lineHeight: 1.75,
-                margin: 0,
-              }}
-            >
-              Помогаю восстановить баланс, устойчивость и ресурс
-              через индивидуальную работу с телом
-            </p>
+            <div>
+              <p
+                style={{
+                  fontSize: "clamp(15px, 1.6vw, 19px)",
+                  color: "rgba(255,255,255,0.65)",
+                  lineHeight: 1.75,
+                  margin: "0 0 12px",
+                }}
+              >
+                Работа с хроническим напряжением, перегрузкой и восстановлением ресурса.
+                Приём ведётся в ограниченном формате по предварительной записи.
+              </p>
+              <p
+                style={{
+                  fontSize: "clamp(13px, 1.2vw, 15px)",
+                  color: "rgba(255,255,255,0.38)",
+                  lineHeight: 1.6,
+                  margin: 0,
+                  letterSpacing: "0.02em",
+                }}
+              >
+                Новые клиенты принимаются на обновлённых условиях работы.
+              </p>
+            </div>
             <button
               onClick={onScrollToContact}
               className="pm-hero-btn"
@@ -153,7 +167,7 @@ export default function PremiumHero({ onScrollToContact }: PremiumHeroProps) {
               onMouseEnter={e => ((e.currentTarget as HTMLButtonElement).style.opacity = "0.85")}
               onMouseLeave={e => ((e.currentTarget as HTMLButtonElement).style.opacity = "1")}
             >
-              Обсудить запрос
+              Уточнить возможность записи
             </button>
           </div>
         </div>

@@ -19,7 +19,7 @@ export default function Premium() {
     >
       <style>{PREMIUM_STYLES}</style>
       <PremiumHero onScrollToContact={scrollToContact} />
-      <PremiumContent />
+      <PremiumContent onScrollToContact={scrollToContact} />
       <PremiumContact />
     </div>
   );
