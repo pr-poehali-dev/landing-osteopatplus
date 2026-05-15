@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import SiteHeader from "@/components/SiteHeader";
 
 const HERO_IMAGE =
   "https://cdn.poehali.dev/projects/97907146-3786-4bb9-932c-87581d3ad09d/files/19c15364-5cdd-43bd-944e-558cd745cf69.jpg";
@@ -10,76 +10,7 @@ interface PremiumHeroProps {
 export default function PremiumHero({ onScrollToContact }: PremiumHeroProps) {
   return (
     <>
-      {/* ─── HEADER ─────────────────────────────────────────── */}
-      <header
-        className="pm-header"
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          right: 0,
-          zIndex: 100,
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          background: "rgba(250,249,247,0.88)",
-          backdropFilter: "blur(12px)",
-          borderBottom: "1px solid rgba(0,0,0,0.06)",
-        }}
-      >
-        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-          <div style={{
-            width: "28px", height: "28px", borderRadius: "50%",
-            background: "linear-gradient(135deg, #C5B9A8 0%, #8A7D6B 100%)",
-            display: "flex", alignItems: "center", justifyContent: "center",
-            flexShrink: 0,
-          }}>
-            <div style={{ width: "10px", height: "10px", borderRadius: "50%", background: "#FAF9F7" }} />
-          </div>
-          <span style={{ fontSize: "13px", letterSpacing: "0.15em", textTransform: "uppercase", color: "#3A3A3A", fontWeight: 500 }}>
-            Остеопат Плюс
-          </span>
-        </div>
-        <nav style={{ display: "flex", alignItems: "center", gap: "24px" }}>
-          <Link to="/about" style={{ fontSize: "12px", letterSpacing: "0.06em", color: "#6A6A6A", textDecoration: "none", transition: "color 0.2s" }}
-            onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.color = "#1A1A1A"}
-            onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.color = "#6A6A6A"}
-          >
-            Обо мне
-          </Link>
-          <Link to="/observations" style={{ fontSize: "12px", letterSpacing: "0.06em", color: "#6A6A6A", textDecoration: "none", transition: "color 0.2s" }}
-            onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.color = "#1A1A1A"}
-            onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.color = "#6A6A6A"}
-          >
-            Наблюдения
-          </Link>
-          <button
-            onClick={onScrollToContact}
-            style={{
-              fontSize: "12px",
-              letterSpacing: "0.08em",
-              background: "none",
-              border: "1px solid #2C2C2C",
-              padding: "9px 18px",
-              cursor: "pointer",
-              color: "#2C2C2C",
-              transition: "all 0.3s ease",
-              whiteSpace: "nowrap",
-              fontFamily: "inherit",
-            }}
-            onMouseEnter={e => {
-              (e.currentTarget as HTMLButtonElement).style.background = "#2C2C2C";
-              (e.currentTarget as HTMLButtonElement).style.color = "#FAF9F7";
-            }}
-            onMouseLeave={e => {
-              (e.currentTarget as HTMLButtonElement).style.background = "none";
-              (e.currentTarget as HTMLButtonElement).style.color = "#2C2C2C";
-            }}
-          >
-            Записаться
-          </button>
-        </nav>
-      </header>
+      <SiteHeader onScrollToContact={onScrollToContact} />
 
       {/* ─── HERO ────────────────────────────────────────────── */}
       <section

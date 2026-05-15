@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
 import { FadeIn } from "./premium/PremiumUtils";
 import PremiumFooter from "./premium/PremiumFooter";
+import SiteHeader from "@/components/SiteHeader";
 
 const notes = [
   "Большинство работает с симптомами. Я работаю с причиной состояния.",
@@ -37,62 +37,7 @@ export default function Observations() {
         fontFamily: "'Inter', 'Helvetica Neue', Arial, sans-serif",
       }}
     >
-      {/* HEADER */}
-      <header
-        style={{
-          padding: "20px 24px",
-          position: "fixed",
-          top: 0,
-          left: 0,
-          right: 0,
-          zIndex: 100,
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          background: "rgba(250,249,247,0.88)",
-          backdropFilter: "blur(12px)",
-          borderBottom: "1px solid rgba(0,0,0,0.06)",
-        }}
-      >
-        <Link to="/" style={{ display: "flex", alignItems: "center", gap: "10px", textDecoration: "none" }}>
-          <div style={{
-            width: "28px", height: "28px", borderRadius: "50%",
-            background: "linear-gradient(135deg, #C5B9A8 0%, #8A7D6B 100%)",
-            display: "flex", alignItems: "center", justifyContent: "center",
-            flexShrink: 0,
-          }}>
-            <div style={{ width: "10px", height: "10px", borderRadius: "50%", background: "#FAF9F7" }} />
-          </div>
-          <span style={{ fontSize: "13px", letterSpacing: "0.15em", textTransform: "uppercase", color: "#3A3A3A", fontWeight: 500 }}>
-            Private Practice
-          </span>
-        </Link>
-        <nav style={{ display: "flex", alignItems: "center", gap: "24px" }}>
-          <Link to="/about" style={{ fontSize: "12px", letterSpacing: "0.06em", color: "#6A6A6A", textDecoration: "none" }}>
-            Обо мне
-          </Link>
-          <Link to="/observations" style={{ fontSize: "12px", letterSpacing: "0.06em", color: "#1A1A1A", textDecoration: "none", fontWeight: 500, borderBottom: "1px solid #1A1A1A", paddingBottom: "1px" }}>
-            Наблюдения
-          </Link>
-          <Link
-            to="/"
-            style={{
-              fontSize: "12px",
-              letterSpacing: "0.08em",
-              background: "none",
-              border: "1px solid #2C2C2C",
-              padding: "9px 18px",
-              cursor: "pointer",
-              color: "#2C2C2C",
-              textDecoration: "none",
-              transition: "all 0.3s ease",
-              whiteSpace: "nowrap",
-            }}
-          >
-            Записаться
-          </Link>
-        </nav>
-      </header>
+      <SiteHeader />
 
       {/* CONTENT */}
       <div style={{ paddingTop: "100px", paddingBottom: "80px", maxWidth: "1100px", margin: "0 auto", padding: "100px 24px 80px" }}>
