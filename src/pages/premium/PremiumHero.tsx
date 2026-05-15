@@ -40,7 +40,19 @@ export default function PremiumHero({ onScrollToContact }: PremiumHeroProps) {
             Остеопат Плюс
           </span>
         </div>
-        <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+        <nav style={{ display: "flex", alignItems: "center", gap: "24px" }}>
+          <Link to="/about" style={{ fontSize: "12px", letterSpacing: "0.06em", color: "#6A6A6A", textDecoration: "none", transition: "color 0.2s" }}
+            onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.color = "#1A1A1A"}
+            onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.color = "#6A6A6A"}
+          >
+            Обо мне
+          </Link>
+          <Link to="/observations" style={{ fontSize: "12px", letterSpacing: "0.06em", color: "#6A6A6A", textDecoration: "none", transition: "color 0.2s" }}
+            onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.color = "#1A1A1A"}
+            onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.color = "#6A6A6A"}
+          >
+            Наблюдения
+          </Link>
           <button
             onClick={onScrollToContact}
             style={{
@@ -53,6 +65,7 @@ export default function PremiumHero({ onScrollToContact }: PremiumHeroProps) {
               color: "#2C2C2C",
               transition: "all 0.3s ease",
               whiteSpace: "nowrap",
+              fontFamily: "inherit",
             }}
             onMouseEnter={e => {
               (e.currentTarget as HTMLButtonElement).style.background = "#2C2C2C";
@@ -63,9 +76,9 @@ export default function PremiumHero({ onScrollToContact }: PremiumHeroProps) {
               (e.currentTarget as HTMLButtonElement).style.color = "#2C2C2C";
             }}
           >
-            Обсудить запрос
+            Записаться
           </button>
-        </div>
+        </nav>
       </header>
 
       {/* ─── HERO ────────────────────────────────────────────── */}

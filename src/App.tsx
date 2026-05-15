@@ -14,6 +14,7 @@ function ScrollToTop() {
 import Politics from "./pages/Politics";
 import Premium from "./pages/Premium";
 import Observations from "./pages/Observations";
+import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import NotFoundCustom from "./pages/NotFoundCustom";
 import CookieConsent from "./components/CookieConsent";
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/" element={<Premium />} />
           <Route path="/politics" element={<Politics />} />
           <Route path="/observations" element={<Observations />} />
+          <Route path="/about" element={<About />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFoundCustom />} />
         </Routes>

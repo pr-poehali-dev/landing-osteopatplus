@@ -67,23 +67,31 @@ export default function Observations() {
             Private Practice
           </span>
         </Link>
-        <Link
-          to="/"
-          style={{
-            fontSize: "12px",
-            letterSpacing: "0.08em",
-            background: "none",
-            border: "1px solid #2C2C2C",
-            padding: "9px 18px",
-            cursor: "pointer",
-            color: "#2C2C2C",
-            textDecoration: "none",
-            transition: "all 0.3s ease",
-            whiteSpace: "nowrap",
-          }}
-        >
-          На главную
-        </Link>
+        <nav style={{ display: "flex", alignItems: "center", gap: "24px" }}>
+          <Link to="/about" style={{ fontSize: "12px", letterSpacing: "0.06em", color: "#6A6A6A", textDecoration: "none" }}>
+            Обо мне
+          </Link>
+          <Link to="/observations" style={{ fontSize: "12px", letterSpacing: "0.06em", color: "#1A1A1A", textDecoration: "none", fontWeight: 500, borderBottom: "1px solid #1A1A1A", paddingBottom: "1px" }}>
+            Наблюдения
+          </Link>
+          <Link
+            to="/"
+            style={{
+              fontSize: "12px",
+              letterSpacing: "0.08em",
+              background: "none",
+              border: "1px solid #2C2C2C",
+              padding: "9px 18px",
+              cursor: "pointer",
+              color: "#2C2C2C",
+              textDecoration: "none",
+              transition: "all 0.3s ease",
+              whiteSpace: "nowrap",
+            }}
+          >
+            Записаться
+          </Link>
+        </nav>
       </header>
 
       {/* CONTENT */}
