@@ -1,20 +1,14 @@
 import { useLocation, Link } from "react-router-dom";
-import { useEffect } from "react";
 import PremiumFooter from "./premium/PremiumFooter";
+import { useSeo } from "@/hooks/useSeo";
 
 const NotFoundCustom = () => {
   const location = useLocation();
 
-  useEffect(() => {
-    console.error("404 Error: User attempted to access non-existent route:", location.pathname);
-    document.title = "Страница не найдена — Остеопат Сергей Водопьянов";
-    const desc = document.querySelector('meta[name="description"]');
-    if (desc) desc.setAttribute("content", "Запрошенная страница не найдена. Вернитесь на главную страницу частной практики остеопата Сергея Водопьянова.");
-    return () => {
-      document.title = "Остеопат в Москве — частная практика Сергея Водопьянова";
-      if (desc) desc.setAttribute("content", "Частная остеопатическая практика в Москве на Новослободской. Работаю с болями в спине, шее, головными болями, восстановлением после травм. Запись на приём.");
-    };
-  }, [location.pathname]);
+  useSeo({
+    title: "Страница не найдена — Остеопат Сергей Водопьянов",
+    description: "Запрошенная страница не найдена. Вернитесь на главную страницу частной практики остеопата Сергея Водопьянова.",
+  });
 
   return (
     <div style={{ minHeight: "100vh", background: "#FAF9F7", fontFamily: "'Inter', 'Helvetica Neue', Arial, sans-serif", display: "flex", flexDirection: "column" }}>

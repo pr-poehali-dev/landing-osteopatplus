@@ -1,5 +1,5 @@
-import { useEffect } from "react";
 import { FadeIn, PREMIUM_STYLES } from "./premium/PremiumUtils";
+import { useSeo } from "@/hooks/useSeo";
 import PremiumFooter from "./premium/PremiumFooter";
 import SiteHeader from "@/components/SiteHeader";
 
@@ -43,15 +43,12 @@ export default function Format() {
     }, 400);
   };
 
-  useEffect(() => {
-    document.title = "Формат работы — частная практика Сергея Водопьянова";
-    const desc = document.querySelector('meta[name="description"]');
-    if (desc) desc.setAttribute("content", "Как устроена частная практика: ограниченный формат, индивидуальный подход, приём по предварительной записи. Сергей Водопьянов, Москва.");
-    return () => {
-      document.title = "Остеопат в Москве — частная практика Сергея Водопьянова";
-      if (desc) desc.setAttribute("content", "Частная остеопатическая практика в Москве на Новослободской. Работаю с болями в спине, шее, головными болями, восстановлением после травм. Запись на приём.");
-    };
-  }, []);
+  useSeo({
+    title: "Формат работы — частная практика Сергея Водопьянова",
+    description: "Как устроена частная практика: ограниченный формат, индивидуальный подход, приём по предварительной записи. Сергей Водопьянов, Москва.",
+    ogTitle: "Формат работы — остеопат Сергей Водопьянов",
+    ogDescription: "Ограниченный формат. Индивидуальный подход. Приём по предварительной записи в Москве.",
+  });
 
   return (
     <div

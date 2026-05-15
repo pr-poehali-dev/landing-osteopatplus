@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { useSeo } from "@/hooks/useSeo";
 import { Link } from "react-router-dom";
 import { FadeIn, PREMIUM_STYLES } from "./premium/PremiumUtils";
 import PremiumFooter from "./premium/PremiumFooter";
@@ -122,15 +123,12 @@ function AccordionItem({ item, isOpen, onToggle }: { item: typeof ACCORDION_ITEM
 export default function About() {
   const [openAccordion, setOpenAccordion] = useState<string | null>(null);
 
-  useEffect(() => {
-    document.title = "Обо мне — Сергей Водопьянов, частная практика";
-    const desc = document.querySelector('meta[name="description"]');
-    if (desc) desc.setAttribute("content", "Водопьянов Сергей Геннадьевич — специалист по работе с состоянием тела. Более 17 лет в мануальной терапии и остеопатическом подходе. Частная практика в Москве.");
-    return () => {
-      document.title = "Остеопат в Москве — частная практика Сергея Водопьянова";
-      if (desc) desc.setAttribute("content", "Частная остеопатическая практика в Москве на Новослободской. Работаю с болями в спине, шее, головными болями, восстановлением после травм. Запись на приём.");
-    };
-  }, []);
+  useSeo({
+    title: "Обо мне — Сергей Водопьянов, частная практика",
+    description: "Водопьянов Сергей Геннадьевич — специалист по работе с состоянием тела. Более 17 лет в мануальной терапии и остеопатическом подходе. Частная практика в Москве.",
+    ogTitle: "Сергей Водопьянов — остеопат, частная практика",
+    ogDescription: "17 лет в остеопатии и мануальной терапии. Индивидуальная работа с состоянием тела. Москва, Новослободская.",
+  });
 
   const toggleAccordion = (id: string) => {
     setOpenAccordion(prev => (prev === id ? null : id));

@@ -1,5 +1,5 @@
-import { useEffect } from "react";
 import { FadeIn, PREMIUM_STYLES } from "./premium/PremiumUtils";
+import { useSeo } from "@/hooks/useSeo";
 import PremiumFooter from "./premium/PremiumFooter";
 import SiteHeader from "@/components/SiteHeader";
 
@@ -27,15 +27,12 @@ export default function Vip() {
     window.location.href = "/pricing";
   };
 
-  useEffect(() => {
-    document.title = "Индивидуальное сопровождение — частная практика Сергея Водопьянова";
-    const desc = document.querySelector('meta[name="description"]');
-    if (desc) desc.setAttribute("content", "Закрытый формат длительного индивидуального сопровождения в остеопатической практике Сергея Водопьянова. Приоритетный доступ, регулярная работа с состоянием.");
-    return () => {
-      document.title = "Остеопат в Москве — частная практика Сергея Водопьянова";
-      if (desc) desc.setAttribute("content", "Частная остеопатическая практика в Москве на Новослободской. Работаю с болями в спине, шее, головными болями, восстановлением после травм. Запись на приём.");
-    };
-  }, []);
+  useSeo({
+    title: "Индивидуальное сопровождение — частная практика Сергея Водопьянова",
+    description: "Закрытый формат длительного индивидуального сопровождения в остеопатической практике Сергея Водопьянова. Приоритетный доступ, регулярная работа с состоянием.",
+    ogTitle: "Индивидуальное сопровождение — остеопат Сергей Водопьянов",
+    ogDescription: "Закрытый формат для тех, кому важна регулярная поддержка состояния. Ограниченное число мест. Москва.",
+  });
 
   return (
     <div style={{ minHeight: "100vh", background: "#0F0F0F", fontFamily: "'Inter', 'Helvetica Neue', Arial, sans-serif", color: "#E8E4DF" }}>

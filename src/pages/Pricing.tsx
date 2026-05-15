@@ -1,5 +1,5 @@
-import { useEffect } from "react";
 import { FadeIn, PREMIUM_STYLES } from "./premium/PremiumUtils";
+import { useSeo } from "@/hooks/useSeo";
 import PremiumFooter from "./premium/PremiumFooter";
 import SiteHeader from "@/components/SiteHeader";
 
@@ -38,15 +38,12 @@ export default function Pricing() {
     }, 400);
   };
 
-  useEffect(() => {
-    document.title = "Форматы работы и стоимость — частная практика Сергея Водопьянова";
-    const desc = document.querySelector('meta[name="description"]');
-    if (desc) desc.setAttribute("content", "Форматы работы и стоимость приёма в частной практике Сергея Водопьянова. Первичный приём от 10 000 ₽. Индивидуальный подход, ограниченный формат, Москва.");
-    return () => {
-      document.title = "Остеопат в Москве — частная практика Сергея Водопьянова";
-      if (desc) desc.setAttribute("content", "Частная остеопатическая практика в Москве на Новослободской. Работаю с болями в спине, шее, головными болями, восстановлением после травм. Запись на приём.");
-    };
-  }, []);
+  useSeo({
+    title: "Форматы работы и стоимость — частная практика Сергея Водопьянова",
+    description: "Форматы работы и стоимость приёма в частной практике Сергея Водопьянова. Первичный приём от 10 000 ₽. Индивидуальный подход, ограниченный формат, Москва.",
+    ogTitle: "Стоимость приёма — остеопат Сергей Водопьянов",
+    ogDescription: "Первичный приём от 10 000 ₽. Индивидуальное сопровождение — по запросу. Ограниченный формат, Москва.",
+  });
 
   return (
     <div

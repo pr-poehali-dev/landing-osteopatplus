@@ -1,7 +1,7 @@
-import { useEffect } from "react";
 import { FadeIn } from "./premium/PremiumUtils";
 import PremiumFooter from "./premium/PremiumFooter";
 import SiteHeader from "@/components/SiteHeader";
+import { useSeo } from "@/hooks/useSeo";
 
 const notes = [
   "Большинство работает с симптомами. Я работаю с причиной состояния.",
@@ -19,15 +19,12 @@ const rotations = ["-1.2deg", "1.5deg", "-0.7deg", "1.1deg", "-1.8deg", "0.9deg"
 const offsets = ["-2px", "3px", "-1px", "2px", "-3px", "1px", "-2px", "3px", "-1px"];
 
 export default function Observations() {
-  useEffect(() => {
-    document.title = "Наблюдения из практики — Остеопат Сергей Водопьянов";
-    const desc = document.querySelector('meta[name="description"]');
-    if (desc) desc.setAttribute("content", "Наблюдения остеопата из многолетней практики: о теле, напряжении, состоянии и причинах дискомфорта. Частная практика Сергея Водопьянова в Москве.");
-    return () => {
-      document.title = "Остеопат в Москве — частная практика Сергея Водопьянова";
-      if (desc) desc.setAttribute("content", "Частная остеопатическая практика в Москве на Новослободской. Работаю с болями в спине, шее, головными болями, восстановлением после травм. Запись на приём.");
-    };
-  }, []);
+  useSeo({
+    title: "Наблюдения из практики — Остеопат Сергей Водопьянов",
+    description: "Наблюдения остеопата из многолетней практики: о теле, напряжении, состоянии и причинах дискомфорта. Частная практика Сергея Водопьянова в Москве.",
+    ogTitle: "Наблюдения из практики — Сергей Водопьянов",
+    ogDescription: "О теле, напряжении и причинах дискомфорта — из многолетней частной практики остеопата в Москве.",
+  });
 
   return (
     <div
