@@ -15,6 +15,7 @@ import Politics from "./pages/Politics";
 import Premium from "./pages/Premium";
 import Observations from "./pages/Observations";
 import About from "./pages/About";
+import Format from "./pages/Format";
 import NotFound from "./pages/NotFound";
 import NotFoundCustom from "./pages/NotFoundCustom";
 import CookieConsent from "./components/CookieConsent";
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/politics" element={<Politics />} />
           <Route path="/observations" element={<Observations />} />
           <Route path="/about" element={<About />} />
+          <Route path="/format" element={<Format />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFoundCustom />} />
         </Routes>
