@@ -36,24 +36,7 @@ export default function PremiumFooter({ dark = false }: { dark?: boolean }) {
             </div>
           </div>
           <div className="pm-footer-right">
-            <a
-              href="https://t.me/osteomanual"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: "inline-flex", alignItems: "center", gap: "8px",
-                padding: "10px 20px", marginBottom: "16px",
-                background: "transparent", borderRadius: "8px",
-                border: `1px solid ${tgBorder}`,
-                fontSize: "13px", fontWeight: 500, color: link,
-                textDecoration: "none", letterSpacing: "0.04em",
-              }}
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.085 14.45l-2.97-.924c-.646-.203-.658-.646.136-.958l11.57-4.461c.537-.194 1.006.131.741.141z"/>
-              </svg>
-              Telegram-канал
-            </a>
+
             <p style={{ fontSize: "12px", color: meta, marginBottom: "8px" }}>© 2026 Остеопат+. Все права защищены.</p>
             <a href="/politics" style={{ fontSize: "12px", color: meta, textDecoration: "none" }}>Политика конфиденциальности</a>
           </div>
