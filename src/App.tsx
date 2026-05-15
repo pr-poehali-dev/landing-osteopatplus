@@ -17,6 +17,7 @@ import Observations from "./pages/Observations";
 import About from "./pages/About";
 import Format from "./pages/Format";
 import Pricing from "./pages/Pricing";
+import Vip from "./pages/Vip";
 import NotFound from "./pages/NotFound";
 import NotFoundCustom from "./pages/NotFoundCustom";
 import CookieConsent from "./components/CookieConsent";
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/format" element={<Format />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/vip" element={<Vip />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFoundCustom />} />
         </Routes>

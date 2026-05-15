@@ -3,18 +3,33 @@ import { Link, useLocation } from "react-router-dom";
 
 interface SiteHeaderProps {
   onScrollToContact?: () => void;
+  dark?: boolean;
 }
 
 const NAV_LINKS = [
   { label: "Обо мне", to: "/about" },
   { label: "Формат работы", to: "/format" },
   { label: "Стоимость", to: "/pricing" },
+  { label: "Сопровождение", to: "/vip" },
   { label: "Наблюдения", to: "/observations" },
 ];
 
-export default function SiteHeader({ onScrollToContact }: SiteHeaderProps) {
+export default function SiteHeader({ onScrollToContact, dark = false }: SiteHeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const { pathname } = useLocation();
+
+  const bg = dark ? "rgba(15,15,15,0.92)" : "rgba(250,249,247,0.92)";
+  const border = dark ? "rgba(255,255,255,0.05)" : "rgba(0,0,0,0.06)";
+  const logoText = dark ? "#C5B9A8" : "#3A3A3A";
+  const navActive = dark ? "#F0ECE7" : "#1A1A1A";
+  const navDefault = dark ? "#3A3A3A" : "#6A6A6A";
+  const btnBorder = dark ? "rgba(232,228,223,0.25)" : "#2C2C2C";
+  const btnColor = dark ? "#9A9A9A" : "#2C2C2C";
+  const burgerColor = dark ? "#C5B9A8" : "#2C2C2C";
+  const mobileBg = dark ? "rgba(15,15,15,0.98)" : "rgba(250,249,247,0.97)";
+  const mobileBorder = dark ? "rgba(255,255,255,0.05)" : "rgba(0,0,0,0.06)";
+  const mobileLinkColor = dark ? "#4A4A4A" : "#5A5A5A";
+  const mobileActive = dark ? "#E8E4DF" : "#1A1A1A";
 
   const handleBooking = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -38,9 +53,9 @@ export default function SiteHeader({ onScrollToContact }: SiteHeaderProps) {
           left: 0,
           right: 0,
           zIndex: 200,
-          background: "rgba(250,249,247,0.92)",
+          background: bg,
           backdropFilter: "blur(12px)",
-          borderBottom: menuOpen ? "none" : "1px solid rgba(0,0,0,0.06)",
+          borderBottom: menuOpen ? "none" : `1px solid ${border}`,
           fontFamily: "'Inter', 'Helvetica Neue', Arial, sans-serif",
         }}
       >
@@ -52,7 +67,6 @@ export default function SiteHeader({ onScrollToContact }: SiteHeaderProps) {
             padding: "20px 24px",
           }}
         >
-          {/* Логотип */}
           <Link to="/" style={{ display: "flex", alignItems: "center", gap: "10px", textDecoration: "none" }} onClick={() => setMenuOpen(false)}>
             <div style={{
               width: "28px", height: "28px", borderRadius: "50%",
@@ -60,14 +74,13 @@ export default function SiteHeader({ onScrollToContact }: SiteHeaderProps) {
               display: "flex", alignItems: "center", justifyContent: "center",
               flexShrink: 0,
             }}>
-              <div style={{ width: "10px", height: "10px", borderRadius: "50%", background: "#FAF9F7" }} />
+              <div style={{ width: "10px", height: "10px", borderRadius: "50%", background: dark ? "#0F0F0F" : "#FAF9F7" }} />
             </div>
-            <span style={{ fontSize: "13px", letterSpacing: "0.15em", textTransform: "uppercase", color: "#3A3A3A", fontWeight: 500 }}>
+            <span style={{ fontSize: "13px", letterSpacing: "0.15em", textTransform: "uppercase", color: logoText, fontWeight: 500 }}>
               Остеопат Плюс
             </span>
           </Link>
 
-          {/* Десктоп-меню */}
           <nav style={{ display: "flex", alignItems: "center", gap: "24px" }} className="site-nav-desktop">
             {NAV_LINKS.map(link => (
               <Link
@@ -76,10 +89,10 @@ export default function SiteHeader({ onScrollToContact }: SiteHeaderProps) {
                 style={{
                   fontSize: "12px",
                   letterSpacing: "0.06em",
-                  color: pathname === link.to ? "#1A1A1A" : "#6A6A6A",
+                  color: pathname === link.to ? navActive : navDefault,
                   textDecoration: "none",
                   fontWeight: pathname === link.to ? 500 : 400,
-                  borderBottom: pathname === link.to ? "1px solid #1A1A1A" : "none",
+                  borderBottom: pathname === link.to ? `1px solid ${navActive}` : "none",
                   paddingBottom: pathname === link.to ? "1px" : "0",
                   transition: "color 0.2s",
                 }}
@@ -93,28 +106,31 @@ export default function SiteHeader({ onScrollToContact }: SiteHeaderProps) {
                 fontSize: "12px",
                 letterSpacing: "0.08em",
                 background: "none",
-                border: "1px solid #2C2C2C",
+                border: `1px solid ${btnBorder}`,
                 padding: "9px 18px",
                 cursor: "pointer",
-                color: "#2C2C2C",
+                color: btnColor,
                 transition: "all 0.3s ease",
                 whiteSpace: "nowrap",
                 fontFamily: "inherit",
               }}
               onMouseEnter={e => {
-                (e.currentTarget as HTMLButtonElement).style.background = "#2C2C2C";
-                (e.currentTarget as HTMLButtonElement).style.color = "#FAF9F7";
+                const btn = e.currentTarget as HTMLButtonElement;
+                btn.style.background = dark ? "#E8E4DF" : "#2C2C2C";
+                btn.style.color = dark ? "#0F0F0F" : "#FAF9F7";
+                btn.style.borderColor = dark ? "#E8E4DF" : "#2C2C2C";
               }}
               onMouseLeave={e => {
-                (e.currentTarget as HTMLButtonElement).style.background = "none";
-                (e.currentTarget as HTMLButtonElement).style.color = "#2C2C2C";
+                const btn = e.currentTarget as HTMLButtonElement;
+                btn.style.background = "none";
+                btn.style.color = btnColor;
+                btn.style.borderColor = btnBorder;
               }}
             >
               Записаться
             </button>
           </nav>
 
-          {/* Гамбургер (мобиль) */}
           <button
             onClick={() => setMenuOpen(prev => !prev)}
             className="site-nav-burger"
@@ -131,41 +147,31 @@ export default function SiteHeader({ onScrollToContact }: SiteHeaderProps) {
             aria-label="Меню"
           >
             <span style={{
-              display: "block",
-              width: "22px",
-              height: "1.5px",
-              background: "#2C2C2C",
-              transition: "all 0.3s ease",
+              display: "block", width: "22px", height: "1.5px",
+              background: burgerColor, transition: "all 0.3s ease",
               transform: menuOpen ? "translateY(6.5px) rotate(45deg)" : "none",
             }} />
             <span style={{
-              display: "block",
-              width: "16px",
-              height: "1.5px",
-              background: "#2C2C2C",
-              transition: "all 0.3s ease",
+              display: "block", width: "16px", height: "1.5px",
+              background: burgerColor, transition: "all 0.3s ease",
               opacity: menuOpen ? 0 : 1,
             }} />
             <span style={{
-              display: "block",
-              width: "22px",
-              height: "1.5px",
-              background: "#2C2C2C",
-              transition: "all 0.3s ease",
+              display: "block", width: "22px", height: "1.5px",
+              background: burgerColor, transition: "all 0.3s ease",
               transform: menuOpen ? "translateY(-6.5px) rotate(-45deg)" : "none",
             }} />
           </button>
         </div>
 
-        {/* Мобильное меню-аккордеон */}
         <div
           className="site-nav-mobile"
           style={{
-            maxHeight: menuOpen ? "320px" : "0",
+            maxHeight: menuOpen ? "380px" : "0",
             overflow: "hidden",
             transition: "max-height 0.4s ease",
-            borderTop: menuOpen ? "1px solid rgba(0,0,0,0.06)" : "none",
-            background: "rgba(250,249,247,0.97)",
+            borderTop: menuOpen ? `1px solid ${mobileBorder}` : "none",
+            background: mobileBg,
           }}
         >
           <div style={{ padding: "8px 24px 28px", display: "flex", flexDirection: "column", gap: "2px" }}>
@@ -178,10 +184,10 @@ export default function SiteHeader({ onScrollToContact }: SiteHeaderProps) {
                   fontSize: "20px",
                   fontWeight: 300,
                   letterSpacing: "-0.01em",
-                  color: pathname === link.to ? "#1A1A1A" : "#5A5A5A",
+                  color: pathname === link.to ? mobileActive : mobileLinkColor,
                   textDecoration: "none",
                   padding: "14px 0",
-                  borderBottom: "1px solid rgba(0,0,0,0.06)",
+                  borderBottom: `1px solid ${mobileBorder}`,
                   display: "block",
                   transition: "color 0.2s",
                 }}
@@ -196,11 +202,11 @@ export default function SiteHeader({ onScrollToContact }: SiteHeaderProps) {
                 fontSize: "13px",
                 letterSpacing: "0.1em",
                 textTransform: "uppercase",
-                background: "#2C2C2C",
+                background: dark ? "#E8E4DF" : "#2C2C2C",
                 border: "none",
                 padding: "16px 0",
                 cursor: "pointer",
-                color: "#FAF9F7",
+                color: dark ? "#0F0F0F" : "#FAF9F7",
                 fontFamily: "inherit",
                 width: "100%",
               }}
